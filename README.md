@@ -24,7 +24,7 @@ it will create 2 files: Stock_market.csv and Stock_market.xlsx
 
 - Changed the line: *sp500_value = float(row\["Adjusted Close"\])*  
   **to:** *sp500_value = float(row\["Adj Close"\])*  
-  \(is necessary when you got your YAHOO_INDEX_GSPC.csv from here: (https://github.com/michaelgu95/machine-learning-stocks/blob/master/YAHOO-INDEX_GSPC.csv)\)
+  \(is necessary when you got your YAHOO_INDEX_GSPC.csv from here: https://github.com/michaelgu95/machine-learning-stocks/blob/master/YAHOO-INDEX_GSPC.csv)
   
  - Changed the line: *'Shares Short (prior '*
   to: *'Shares Short (prior month)'*
