@@ -14,7 +14,7 @@ Make sure to change the lines to the location of your datasets
 *sp500_df = pd.read_csv(".../datasets/YAHOO_INDEX_GSPC.csv") # insert here your path to the YAHOO_INDEX_GSPC.csv*  
 
 run the file with the command in the cmd:
-``` py sentdex_stock_market.py ```
+``` py sentdex_stock_market.py ```  
 it will create 2 files: Stock_market.csv and Stock_market.xlsx 
 
 # Changes
