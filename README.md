@@ -36,3 +36,7 @@ it will create 2 files: *Stock_market.csv* and *Stock_market.xlsx*
 - round sp500_value to 4 decimal points 
 - added a extra ```try except```for better debuging
 - changed unixtime from *float* to *int*
+
+# License & Credits
+MIT License means: https://choosealicense.com/licenses/mit/  
+Credits sentdex: https://www.youtube.com/user/sentdex/
