@@ -2,6 +2,7 @@
 Date of upload: 09.08.2019  
 Fixed file from the youtube tutorial series from [sentdex](https://youtu.be/URTZ2jKCgBc) Stand: [Episode 12](https://www.youtube.com/watch?v=4WM6hB7l4Lc&list=PLQVvvaa0QuDd0flgGphKCej-9jp-QdzZ3&index=12).
 
+
 # Use
 1. Download the file *sentdex_stock_market_episode12.py*.
 
@@ -24,6 +25,7 @@ Make sure to change this line from:
 **to:**  
 ``` for each_dir in stock_list[1:]:```  
 
+
 # Changes
 **Bug Fixes:**
 - Changed the line: *row = sp500_df\[(sp500_df.index == sp500_date)\]*  
@@ -36,13 +38,15 @@ Make sure to change this line from:
   
  - Changed the line: *'Shares Short (prior '*
   to: *'Shares Short (prior month)'*
- 
+  
+  
   
 **Features:**
 - added df.to_excel() at the end to also save the file as xlsx format
 - round sp500_value to 4 decimal points 
 - added a extra ```try except```for better debuging
 - changed unixtime from *float* to *int*
+
 
 # License & Credits
 MIT License means: https://choosealicense.com/licenses/mit/  
