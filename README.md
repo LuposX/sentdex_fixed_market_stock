@@ -15,7 +15,7 @@ Make sure to change the lines to the location of your datasets
 
 run the file with the command in the cmd:  
 ``` py sentdex_stock_market.py ```  
-it will create 2 files: Stock_market.csv and Stock_market.xlsx 
+it will create 2 files: *Stock_market.csv* and *Stock_market.xlsx* 
 
 # Changes
 **Bug Fixes:**
