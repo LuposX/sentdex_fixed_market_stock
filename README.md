@@ -35,3 +35,4 @@ it will create 2 files: *Stock_market.csv* and *Stock_market.xlsx*
 - added df.to_excel() at the end to also save the file as xlsx format
 - round sp500_value to 4 decimal points 
 - added a extra ```try except```for better debuging
+- changed unixtime from *float* to *int*
