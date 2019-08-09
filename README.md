@@ -23,7 +23,7 @@ it will create 2 files: Stock_market.csv and Stock_market.xlsx
   to: *row = sp500\[sp500\["Date"\] == sp500_date]*
 
 - Changed the line: *sp500_value = float(row\["Adjusted Close"\])*
-  to: *sp500_value = float(row\["Adj Close"\])*  
+  **to:** *sp500_value = float(row\["Adj Close"\])*  
   \(is necessary when you got your YAHOO_INDEX_GSPC.csv from here: (https://github.com/michaelgu95/machine-learning-stocks/blob/master/YAHOO-INDEX_GSPC.csv)\)
   
  - Changed the line: *'Shares Short (prior '*
