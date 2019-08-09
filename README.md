@@ -1,5 +1,5 @@
 # sentdex_fixed_market_stock
-Date of upload: 09.08.2019
+Date of upload: 09.08.2019  
 Fixed file for the youtube Tutorial series from [sentdex](https://youtu.be/URTZ2jKCgBc) Stand: [Episode 12](https://www.youtube.com/watch?v=4WM6hB7l4Lc&list=PLQVvvaa0QuDd0flgGphKCej-9jp-QdzZ3&index=12).
 
 # Use
