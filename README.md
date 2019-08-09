@@ -17,9 +17,9 @@ Fixed file from the youtube tutorial series from [sentdex](https://youtu.be/URTZ
 ``` py sentdex_stock_market.py ```  
 it will create 2 files: *Stock_market.csv* and *Stock_market.xlsx*  
 
-Notes:
-When you want to parse the whole data.  
-Make sure to change this line from:
+Notes:  
+When you want to parse the whole data.   
+Make sure to change this line from:  
 ```python for each_dir in stock_list\[1:10\]:```  
 **to:**  
 ```python for each_dir in stock_list\[1:\]:```  
