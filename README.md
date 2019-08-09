@@ -23,8 +23,21 @@ When you want to parse the whole data.
 Make sure to change this line from:  
 ``` for each_dir in stock_list[1:10]:```  
 **to:**  
-``` for each_dir in stock_list[1:]:```  
+``` for each_dir in stock_list[1:]:```    
+  
+I also would recommend to delete this line:    
+```
+if value_list.count("N/A") > 0:    
+    pass 
+``` 
 
+
+**Image without N/A values:**  
+![Without N/A values](/images/image_without_na_values.png)
+
+**Image with N/A values:**  
+![Without N/A values](/images/image_with_na_values.png)
+           
 
 # Changes
 **Bug Fixes:**
