@@ -9,10 +9,8 @@ import re
 import urllib
 
 
-
-
-path = "C:/Users/schup/datasets/intraQuarter" # insert here your path to the intraQuarter dataset
-sp500_df = pd.read_csv("C:/Users/schup/datasets/YAHOO_INDEX_GSPC.csv") # insert here your path to the YAHOO_INDEX_GSPC.csv
+path = "../datasets/intraQuarter" # insert here your path to the intraQuarter dataset
+sp500_df = pd.read_csv("../datasets/YAHOO_INDEX_GSPC.csv") # insert here your path to the YAHOO_INDEX_GSPC.csv
 
 
 def Key_Stats(gather=["Total Debt/Equity",
