@@ -10,8 +10,8 @@ import urllib
 
 
 
-path = "../intraQuarter" # insert here your path to the intraQuarter dataset
-sp500_df = pd.read_csv(".../datasets/YAHOO_INDEX_GSPC.csv") # insert here your path to the YAHOO_INDEX_GSPC.csv
+path = "C:/Users/schup/datasets/intraQuarter" # insert here your path to the intraQuarter dataset
+sp500_df = pd.read_csv("C:/Users/schup/datasets/YAHOO_INDEX_GSPC.csv") # insert here your path to the YAHOO_INDEX_GSPC.csv
 
 
 def Key_Stats(gather=["Total Debt/Equity",
@@ -113,7 +113,7 @@ def Key_Stats(gather=["Total Debt/Equity",
         if len(each_file) > 0:
             for file in each_file:
                 date_stamp = datetime.strptime(file, '%Y%m%d%H%M%S.html')
-                unix_time = time.mktime(date_stamp.timetuple())
+                unix_time = int(time.mktime(date_stamp.timetuple()))
                 full_file_path = each_dir+'/'+file
                 source = open(full_file_path,'r').read()
                 try:
@@ -134,9 +134,10 @@ def Key_Stats(gather=["Total Debt/Equity",
                             value_list.append(value)
                             
                             
-                        except Exception as e:
+                        except Exception as e1:
                             value = np.nan
                             value_list.append(value)
+                            print("Error 1: ", e1)
                             
 
         
@@ -150,9 +151,9 @@ def Key_Stats(gather=["Total Debt/Equity",
                             sp500_date = datetime.fromtimestamp(unix_time-259200).strftime('%Y-%m-%d')
                             row = sp500_df[sp500_df["Date"] == sp500_date]
                             sp500_value = float(row["Adj Close"])
-                        except Exception as e:
+                        except Exception as e2:
                              sp500_value = np.nan
-                             print("Error: ", e)
+                             print("Error 2: ", e2)
 
                     try:
                         stock_price = float(source.split('</small><big><b>')[1].split('</b></big>')[0])
@@ -164,13 +165,14 @@ def Key_Stats(gather=["Total Debt/Equity",
                             stock_price = float(stock_price.group(1))
 
                             #print(stock_price)
-                        except Exception as e:
+                        except:
                             try:
                                 stock_price = (source.split('<span class="time_rtq_ticker">')[1].split('</span>')[0])
                                 stock_price = re.search(r'(\d{1,8}\.\d{1,8})',stock_price)
                                 stock_price = float(stock_price.group(1))
-                            except Exception as e:
-                                print(str(e),'a;lsdkfh',file,ticker)
+                            except Exception as e3:
+                                # print(str(e),'a;lsdkfh',file,ticker)
+                                 print("Error 3: ", e3)
 
                             #print('Latest:',stock_price)
 
@@ -260,6 +262,7 @@ def Key_Stats(gather=["Total Debt/Equity",
     def save(file_format):
         return  "Stock_market." + file_format
     
-	df.to_excel(save("xlsx"), index=False)  
+    df.to_excel(save("xlsx"), index=False)  
     df.to_csv(save("csv"), index=False) 
+
 Key_Stats()
