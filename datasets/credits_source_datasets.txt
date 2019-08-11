@@ -1,0 +1,21 @@
+housing market:
+------------------------
+https://github.com/udacity/machine-learning
+https://www.kaggle.com/schirmerchad/bostonhoustingmlnd/downloads/bostonhoustingmlnd.zip/1
+
+
+yahoo index GSPC:
+---------------------------
+https://github.com/michaelgu95/machine-learning-stocks/blob/master/YAHOO-INDEX_GSPC.csv
+https://github.com/LuposX/sentdex_fixed_market_stock
+
+
+IntraQuarter:
+--------------------------
+https://pythonprogramming.net/downloads/intraQuarter.zip/
+https://github.com/LuposX/sentdex_fixed_market_stock
+
+
+GOT:
+----------------------------
+https://www.kaggle.com/mylesoneill/game-of-thrones/
