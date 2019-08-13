@@ -1,6 +1,7 @@
 # sentdex_fixed_market_stock
 Date of first upload: *09.08.2019*  
-Date of last upload: *13.08.2019*    
+Date of last upload: *13.08.2019*
+  
 This is a github repository for the youtube tutorial series from [sentdex](https://youtu.be/URTZ2jKCgBc). Stand: [Episode 18](https://www.youtube.com/watch?v=l68b0d92AHQ&list=PLQVvvaa0QuDd0flgGphKCej-9jp-QdzZ3&index=18).   
 This github repository is UNOFFICIAL
 go here if you want to support sentdex:  
@@ -8,7 +9,8 @@ go here if you want to support sentdex:
 - [Sentdex Website](https://pythonprogramming.net/)
 
 Because the sentdex tutorial playlist is from 2014. Some libaries changed and the original code which sentdex uploaded on his [forum](https://pythonprogramming.net/) doesn't work anymore (at least for me). Therefore i want to offer my code that worked for me for those who 
-it need.
+it need. 
+If you have any Issued please open a **[Issue](https://github.com/LuposX/sentdex_fixed_market_stock/issues/new)** in github. 
 
 
 # Use
