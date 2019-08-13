@@ -1,12 +1,10 @@
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
-from matplotlib import style
 import seaborn as sns
 
 import sklearn
 from sklearn import svm, preprocessing
-from sklearn.metrics import classification_report, confusion_matrix
+from sklearn.metrics import classification_report
 sns.set_style("darkgrid")
 
 #-------------------------------------------------------------------------------------------------------
@@ -51,8 +49,8 @@ FEATURES =  ['DE Ratio',
 # example from the video for a function that randomizes our data
 def randomizer():
     df = pd.DataFrame({"D1": range(5), "D2": range(5)}) 
-    df2 = df.reindex(np.random.permutation(df.index))
-
+    df = df.reindex(np.random.permutation(df.index))
+ 
 #-------------------------------------------------------------------------------------------------------
 def Build_Data_Set():
     
@@ -106,7 +104,7 @@ def Analyis(report=False):
     
     #prints classification report
     if report: print(classification_report(y[-test_size:], pred))
-    
+ 
     return X, y
 
 #-------------------------------------------------------------------------------------------------------
