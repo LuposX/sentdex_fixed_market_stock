@@ -9,6 +9,7 @@ from sklearn import svm, preprocessing
 from sklearn.metrics import classification_report, confusion_matrix
 sns.set_style("darkgrid")
 
+#-------------------------------------------------------------------------------------------------------
 FEATURES =  ['DE Ratio',
              'Trailing P/E',
              'Price/Sales',
@@ -45,10 +46,12 @@ FEATURES =  ['DE Ratio',
              'Short % of Float',
              'Shares Short (prior month)']
 
+#-------------------------------------------------------------------------------------------------------
 def randomizer():
     df = pd.DataFrame({"D1": range(5), "D2": range(5)}) 
     df2 = df.reindex(np.random.permutation(df.index))
-	
+
+#-------------------------------------------------------------------------------------------------------
 def Build_Data_Set():
     
     # reads the csv to save it in ram
@@ -77,7 +80,8 @@ def Build_Data_Set():
     print("X std: ", X.std())
     
     return X, y
-	
+
+#-------------------------------------------------------------------------------------------------------
 def Analyis(report=False):
     
     test_size = 500
@@ -101,5 +105,6 @@ def Analyis(report=False):
     if report: print(classification_report(y[-test_size:], pred))
     
     return X, y
-	
+
+#-------------------------------------------------------------------------------------------------------	
 X, y = Analyis(report=True) 
