@@ -95,7 +95,6 @@ def Key_Stats(gather=["Total Debt/Equity",
                                  'Short Ratio',
                                  'Short % of Float',
                                  'Shares Short (prior month)',                                
-                                 ##############
                                  'Status'])
     
     # we create a ticker list we're all ticker will stand in
@@ -135,7 +134,7 @@ def Key_Stats(gather=["Total Debt/Equity",
                                 value = float(value.replace("M",''))*1000000
 
                             value_list.append(value)              
-                            
+
                         except Exception as e1:
                             # print("Error 1: ", e1)
                             value = np.nan
@@ -146,7 +145,7 @@ def Key_Stats(gather=["Total Debt/Equity",
                         sp500_date = datetime.fromtimestamp(unix_time).strftime("%Y-%m-%d")
                         row = sp500_df[sp500_df["Date"] == sp500_date]
                         sp500_value = float(row["Adj Close"])
-                        sp500_value = round(sp500_value, 4)                       
+                        sp500_value = round(sp500_value, 4)
                     except:
                         try:
                             sp500_date = datetime.fromtimestamp(unix_time-259200).strftime('%Y-%m-%d')
@@ -247,20 +246,19 @@ def Key_Stats(gather=["Total Debt/Equity",
                                              'Shares Short (prior month)':value_list[34],
                                              'Status':status},
                                              ignore_index=True)
-                                         
-                    
-                
+         
+
                 except Exception as e4:
                     print("Error 4: ", e4)
-                    
+
 
     # gives back a String with the name of the file we save
     def save(file_format):
         return  "Stock_market." + file_format
-    
+
     # we save our datasets as "csv" and as "xlsx"
-    df.to_excel(save("xlsx"), index=False)  
-    df.to_csv(save("csv"), index=False) 
+    df.to_excel(save("xlsx"), index=False)
+    df.to_csv(save("csv"), index=False)
 
 # we run our function
 Key_Stats()
