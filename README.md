@@ -1,5 +1,6 @@
 [![License](https://img.shields.io/github/license/LuposX/sentdex_fixed_market_stock)](LICENSE) 
 ![Size](https://img.shields.io/github/repo-size/LuposX/sentdex_fixed_market_stock)
+[![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](hhttps://github.com/LuposX/sentdex_fixed_market_stock/issues/)
 
 # About
 Date of first upload: *09.08.2019*  
