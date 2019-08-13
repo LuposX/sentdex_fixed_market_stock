@@ -1,4 +1,4 @@
-[![License](https://img.shields.io/badge/license-LGPL--3.0%20with%20anime%20exception-green.svg)](LICENSE)
+[![License](https://img.shields.io/github/license/LuposX/sentdex_fixed_market_stock)](LICENSE)
 # About
 Date of first upload: *09.08.2019*  
 Date of last upload: *13.08.2019*
