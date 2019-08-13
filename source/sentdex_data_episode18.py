@@ -1,7 +1,5 @@
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
-from matplotlib import style
 import seaborn as sns
 from pandas.plotting import register_matplotlib_converters
 register_matplotlib_converters()
@@ -145,7 +143,6 @@ def Key_Stats(return_true_or_false=False, gather=["Total Debt/Equity",
                             value_list.append(value)
                             
 
-                    #------------------------------------------------------------------------------------------------------------------------------------
                     try:        
                         sp500_date = datetime.fromtimestamp(unix_time).strftime("%Y-%m-%d")
                         row = sp500_df[(sp500_df["Date"] == sp500_date)]
@@ -164,10 +161,10 @@ def Key_Stats(return_true_or_false=False, gather=["Total Debt/Equity",
                              print("sp500: ", e2)
                              sp500_value = np.nan
                                 
-                    #------------------------------------------------------------------------------------------------------------------------------------            
+         
                     one_year_later = int(unix_time + 31536000)
                     
-                    #------------------------------------------------------------------------------------------------------------------------------------
+
                     try:        
                         sp500_1y = datetime.fromtimestamp(one_year_later).strftime("%Y-%m-%d")
                         row = sp500_df[(sp500_df["Date"] == sp500_1y)]
@@ -185,7 +182,7 @@ def Key_Stats(return_true_or_false=False, gather=["Total Debt/Equity",
                             print("sp500 1y later: ", e3)
                             sp500_value = np.nan
                     
-                    #------------------------------------------------------------------------------------------------------------------------------------
+
                     try:
                         stock_price_1y = datetime.fromtimestamp(one_year_later).strftime('%Y-%m-%d')
                         row = stock_df[(stock_df["Date"] == stock_price_1y)][ticker.upper()]
@@ -203,8 +200,7 @@ def Key_Stats(return_true_or_false=False, gather=["Total Debt/Equity",
                             # print(" ")
                             stock_1y_value = np.nan
                     
-                    
-                    #------------------------------------------------------------------------------------------------------------------------------------
+
                     try:
                         stock_price = datetime.fromtimestamp(unix_time).strftime('%Y-%m-%d')
                         row = stock_df[(stock_df["Date"] == stock_price)][ticker.upper()]
@@ -213,9 +209,7 @@ def Key_Stats(return_true_or_false=False, gather=["Total Debt/Equity",
                     except:
                         try:
                             stock_price = datetime.fromtimestamp(unix_time - 259200).strftime('%Y-%m-%d')
-                            # ----------------------------------------------------------------------------------------
                             row = stock_df[(stock_df["Date"] == stock_price)][ticker.upper()] # this line fails
-                            # ----------------------------------------------------------------------------------------
                             #print("stock_df: ", stock_df[(stock_df["Date"] == stock_price_1y)][ticker.upper()])
                             
                             #print("-------------------------------------------------------------------------")
@@ -230,7 +224,7 @@ def Key_Stats(return_true_or_false=False, gather=["Total Debt/Equity",
                             print("stock price: ", str(e5))
                             # print(" ")
                     
-                    #---------------------------------------------------------------------------------------------------------------------------------
+                  
                     stock_p_change = round((((stock_1y_value - stock_price) / stock_price) * 100), 2)
                     sp500_p_change = round((((sp500_1y_value - sp500_value) / sp500_value) * 100), 2)
                      
@@ -241,7 +235,7 @@ def Key_Stats(return_true_or_false=False, gather=["Total Debt/Equity",
                     else:
                         status = "underperform"
                     
-                    #----------------------------------------------------------------------------------------------------------------------------------------
+            
                     # only appending when there are no "N/A" values
                     if value_list.count("N/A") > 0:
                         pass
@@ -301,7 +295,6 @@ def Key_Stats(return_true_or_false=False, gather=["Total Debt/Equity",
                     break
 
 
-    #----------------------------------------------------------------------------------------------------------------------------------------
     # saving the file with the right format
     def save(file_format):
         return  "Stock_market_acc_NO_NA." + file_format
