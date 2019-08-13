@@ -1,6 +1,5 @@
 import pandas as pd
 import os
-import numpy as np
 import time
 
 import quandl
@@ -41,7 +40,7 @@ def Stock_Prices():
     df.reset_index(inplace=True)
     df["Date"] = pd.to_datetime(df["Date"])
     df.to_csv("stock_prices.csv", index=False)
-    
+
     return df
 
 df = Stock_Prices()
