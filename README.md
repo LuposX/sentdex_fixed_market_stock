@@ -14,11 +14,8 @@ it need.
 # Use
 1. Download the file for the corresponding episode in the **source** folder.
 	
-2. Most of the files need those datasets:   
--**YAHOO_INDEX_GSPC.csv** (can be found in the **dataset** folder)            
--**[intraQuarter](https://pythonprogramming.net/downloads/intraQuarter.zip/)** 
-  
-I also would recomend to either create the datasets you need, in the file you downloaded, with other python scripts from me (from the **source** folder) or to download the corresponding **datasets** from my folder. Do not use your own Datasets.  
+2. I would recomend to either create the datasets you need, in the file you downloaded, with other python scripts from me (from the **source** folder) or to download the corresponding **datasets** from my folder. DO NOT USE YOUR OWN DATASETS IT MIGHT NOT WORK.
+More under [Datasets](#Datasets).
 
 3. Make sure to change, in the files you downloaded, the lines to the location of your **datasets** when needed. 
 
@@ -29,6 +26,18 @@ I also would recomend to either create the datasets you need, in the file you do
 - In some files you need to change this line when you want to parse the whole dataset or less:    
 ``` for each_dir in stock_list[1:10]:```    
 - In addition to the libaries sentdex used in his playlist i use **Seaborn** can be downloaded [here](https://seaborn.pydata.org/installing.html).
+
+## Datasets
+Here i'll list the files and the datasets they need:   
+*sentdex_visualization_episode11.py* can be found [here](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/source/sentdex_visualization_episode11.py):  
+- **None**  
+  
+*sentdex_stock_market_episode12.py* can be found [here](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/source/sentdex_stock_market_episode12.py):  
+- **[intraQuarter](https://pythonprogramming.net/downloads/intraQuarter.zip/)**  
+- **[sp500_df](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/datasets/YAHOO_INDEX_GSPC.csv)** 
+  
+*sentdex_visualization_episode13.py* can be found [here](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/source/sentdex_visualization_episode13.py):
+
 # License & Credits
 MIT License means: https://choosealicense.com/licenses/mit/  
 Credits sentdex: https://www.youtube.com/user/sentdex/
