@@ -7,6 +7,7 @@ import seaborn as sns
 from sklearn import svm, preprocessing
 sns.set_style("darkgrid")
 
+ #--------------------------------------------------------------------------------------------------------------------------
 def Build_Data_Set(features=["DE Ratio", 
                              "Trailing P/E"]):
     
@@ -27,7 +28,8 @@ def Build_Data_Set(features=["DE Ratio",
     X = preprocessing.scale(X)
     
     return X, y
-	
+
+ #--------------------------------------------------------------------------------------------------------------------------
 def Analyis():
     # recall the Build_Data_Set() function to get X, y
     X, y = Build_Data_Set()
@@ -46,9 +48,11 @@ def Analyis():
     yy = a * xx - clf.intercept_[0] / w[1]
       
     return xx, yy, X, y
-	
+
+#--------------------------------------------------------------------------------------------------------------------------
 xx, yy, X, y = Analyis()
 
+#--------------------------------------------------------------------------------------------------------------------------
 plt.figure(figsize=(9, 6))
 
 sns.scatterplot(x=X[:, 0], y=X[:, 1], hue=y)
