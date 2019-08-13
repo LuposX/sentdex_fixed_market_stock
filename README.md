@@ -1,6 +1,6 @@
 # sentdex_fixed_market_stock
-Date of first upload: 09.08.2019  
-Date of last upload: 13.08.2019    
+Date of first upload: *09.08.2019*  
+Date of last upload: *13.08.2019*    
 This is a github repository for the youtube tutorial series from [sentdex](https://youtu.be/URTZ2jKCgBc). Stand: [Episode 18](https://www.youtube.com/watch?v=l68b0d92AHQ&list=PLQVvvaa0QuDd0flgGphKCej-9jp-QdzZ3&index=18).   
 This github repository is UNOFFICIAL
 go here if you want to support sentdex:  
