@@ -5,9 +5,9 @@ import time
 
 import quandl
 
-quandl.ApiConfig.api_key = "_rwKAGdSdwZz_wFHyqat"
+quandl.ApiConfig.api_key = "XXX"
 
-path = "C:/Users/schup/datasets/intraQuarter"
+path = "/datasets/intraQuarter"
 
 def Stock_Prices():
     df = pd.DataFrame()
