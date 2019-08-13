@@ -1,6 +1,5 @@
 import pandas as pd
 import numpy as np
-import seaborn as sns
 from pandas.plotting import register_matplotlib_converters
 register_matplotlib_converters()
 
@@ -101,7 +100,7 @@ def Key_Stats(return_true_or_false=False, gather=["Total Debt/Equity",
                                  'Status'])
 
     ticker_list = []
-    
+
     for each_dir in stock_list[1:10]:
         each_file = os.listdir(each_dir)
         ticker = each_dir.split("\\")[1]
@@ -110,7 +109,7 @@ def Key_Stats(return_true_or_false=False, gather=["Total Debt/Equity",
         # starting_stock_value = False
         # starting_sp500_value = False
 
-        
+
         if len(each_file) > 0:
             for file in each_file:
                 date_stamp = datetime.strptime(file, '%Y%m%d%H%M%S.html')
@@ -135,107 +134,106 @@ def Key_Stats(return_true_or_false=False, gather=["Total Debt/Equity",
                                 value = float(value.replace("M",''))*1000000
 
                             value_list.append(value)
-                            
-                            
+ 
+
                         except Exception as e1:
                             # print("Error 1: ", e1)
                             value = np.nan
                             value_list.append(value)
-                            
 
                     try:        
                         sp500_date = datetime.fromtimestamp(unix_time).strftime("%Y-%m-%d")
                         row = sp500_df[(sp500_df["Date"] == sp500_date)]
                         sp500_value = float(row["Adj Close"])
                         sp500_value = round(sp500_value, 4)  
-                        
+  
                     except:
                         try:
                             sp500_date = datetime.fromtimestamp(unix_time - 259200).strftime('%Y-%m-%d')
                             row = sp500_df[(sp500_df["Date"] == sp500_date)]
                             sp500_value = float(row["Adj Close"])   
                             sp500_value = round(sp500_value, 4) 
-                                
+    
                         except Exception as e2:
                              # print(str(e),'a;lsdkfh',file,ticker)
                              print("sp500: ", e2)
                              sp500_value = np.nan
-                                
-         
+
+
                     one_year_later = int(unix_time + 31536000)
-                    
+
 
                     try:        
                         sp500_1y = datetime.fromtimestamp(one_year_later).strftime("%Y-%m-%d")
                         row = sp500_df[(sp500_df["Date"] == sp500_1y)]
                         sp500_1y_value = float(row["Adj Close"])
                         sp500_value = round(sp500_value, 4) 
-                        
+
                     except:
                         try:
                             sp500_1y = datetime.fromtimestamp(one_year_later - 259200).strftime("%Y-%m-%d")
                             row = sp500_df[(sp500_df["Date"] == sp500_1y)]
                             sp500_1y_value = float(row["Adj Close"])
                             sp500_value = round(sp500_value, 4)  
-                            
+
                         except Exception as e3:
                             print("sp500 1y later: ", e3)
                             sp500_value = np.nan
-                    
+
 
                     try:
                         stock_price_1y = datetime.fromtimestamp(one_year_later).strftime('%Y-%m-%d')
                         row = stock_df[(stock_df["Date"] == stock_price_1y)][ticker.upper()]
                         stock_1y_value = round(float(row),2)    
-                        
+
                     except:
                         try:
                             stock_price_1y = datetime.fromtimestamp(one_year_later - 259200).strftime('%Y-%m-%d')
                             row = stock_df[(stock_df["Date"] == stock_price_1y)][ticker.upper()]
                             stock_1y_value = round(float(row), 2)
 
-                            
+
                         except Exception as e4:
                             print("stock price 1y later: ", str(e4))
                             # print(" ")
                             stock_1y_value = np.nan
-                    
+
 
                     try:
                         stock_price = datetime.fromtimestamp(unix_time).strftime('%Y-%m-%d')
                         row = stock_df[(stock_df["Date"] == stock_price)][ticker.upper()]
                         stock_price = round(float(row), 2)    
-                        
+ 
                     except:
                         try:
                             stock_price = datetime.fromtimestamp(unix_time - 259200).strftime('%Y-%m-%d')
                             row = stock_df[(stock_df["Date"] == stock_price)][ticker.upper()] # this line fails
                             #print("stock_df: ", stock_df[(stock_df["Date"] == stock_price_1y)][ticker.upper()])
-                            
+
                             #print("-------------------------------------------------------------------------")
                             #print(row)
                             #print("-------------------------------------------------------------------------")
-                            
+
                             stock_price = round(float(row), 2) 
                             # print(stock_price)
-                            
+
                         except Exception as e5:
                             stock_price = np.nan
                             print("stock price: ", str(e5))
                             # print(" ")
-                    
-                  
+
+
                     stock_p_change = round((((stock_1y_value - stock_price) / stock_price) * 100), 2)
                     sp500_p_change = round((((sp500_1y_value - sp500_value) / sp500_value) * 100), 2)
-                     
+ 
                     difference = stock_p_change - sp500_p_change
 
                     if difference > 0:
                         status = "outperform"
                     else:
                         status = "underperform"
-                    
-            
+
+
                     # only appending when there are no "N/A" values
                     if value_list.count("N/A") > 0:
                         pass
@@ -287,9 +285,9 @@ def Key_Stats(return_true_or_false=False, gather=["Total Debt/Equity",
                                              'Shares Short (prior month)':value_list[34],
                                              'Status':status},
                                              ignore_index=True)
-                                         
+           
                     
-                
+
                 except Exception as e6:
                     print("e6: ", e6)
                     break
@@ -298,10 +296,10 @@ def Key_Stats(return_true_or_false=False, gather=["Total Debt/Equity",
     # saving the file with the right format
     def save(file_format):
         return  "Stock_market_acc_NO_NA." + file_format
-    
+
     # df.to_excel(save("xlsx"), index=False)  
     df.to_csv(save("csv"), index=False) 
-    
+
     if return_true_or_false:
         return df, ticker_list
     
