@@ -1,4 +1,4 @@
-# sentdex_fixed_market_stock
+# About
 Date of first upload: *09.08.2019*  
 Date of last upload: *13.08.2019*
   
