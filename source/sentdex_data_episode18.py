@@ -95,7 +95,7 @@ def Key_Stats(return_true_or_false=False, gather=["Total Debt/Equity",
                                  'Shares Short (as of',
                                  'Short Ratio',
                                  'Short % of Float',
-                                 'Shares Short (prior month)',                                
+                                 'Shares Short (prior month)',
                                  ##############
                                  'Status'])
 
@@ -151,7 +151,7 @@ def Key_Stats(return_true_or_false=False, gather=["Total Debt/Equity",
                         try:
                             sp500_date = datetime.fromtimestamp(unix_time - 259200).strftime('%Y-%m-%d')
                             row = sp500_df[(sp500_df["Date"] == sp500_date)]
-                            sp500_value = float(row["Adj Close"])   
+                            sp500_value = float(row["Adj Close"])
                             sp500_value = round(sp500_value, 4) 
     
                         except Exception as e2:
@@ -163,7 +163,7 @@ def Key_Stats(return_true_or_false=False, gather=["Total Debt/Equity",
                     one_year_later = int(unix_time + 31536000)
 
 
-                    try:        
+                    try:
                         sp500_1y = datetime.fromtimestamp(one_year_later).strftime("%Y-%m-%d")
                         row = sp500_df[(sp500_df["Date"] == sp500_1y)]
                         sp500_1y_value = float(row["Adj Close"])
@@ -298,9 +298,9 @@ def Key_Stats(return_true_or_false=False, gather=["Total Debt/Equity",
         return  "Stock_market_acc_NO_NA." + file_format
 
     # df.to_excel(save("xlsx"), index=False)  
-    df.to_csv(save("csv"), index=False) 
+    df.to_csv(save("csv"), index=False)
 
     if return_true_or_false:
         return df, ticker_list
-    
-Key_Stats(return_true_or_false=False) 
+
+Key_Stats(return_true_or_false=False)
