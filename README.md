@@ -37,7 +37,8 @@ More under [Datasets](#Datasets).
 -  In addition to the libaries sentdex used in his playlist i use **Seaborn** can be downloaded [here](https://seaborn.pydata.org/installing.html).    
   
     
-## Datasets  
+## Datasets 
+
 Here i'll list the files and the datasets you need for them:   
   
 **sentdex_visualization_episode11.py** can be found [here](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/source/sentdex_visualization_episode11.py)**:**     
@@ -62,10 +63,12 @@ Here i'll list the files and the datasets you need for them:
   
   
 ## License & Credits
+
 MIT License means: [Click me](https://choosealicense.com/licenses/mit/)   
 Credits sentdex: [Click me](https://www.youtube.com/user/sentdex/)  
 
 ## Gitpod
+
 If you dont want to download it because you dont know if it malicious or not or other reasons check the online IDE out:  
-Disclaimer: not every file works. Because i didn't upload the **intraQuart** dataset on github and the **stock_price** in a zip is because of the size.
+Disclaimer: not every file works. Because i didn't upload the **intraQuart** dataset on github and the **stock_price** in a zip is because of the size.  
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/LuposX/sentdex_fixed_market_stock/source)  
