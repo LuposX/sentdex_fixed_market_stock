@@ -28,15 +28,27 @@ More under [Datasets](#Datasets).
 - In addition to the libaries sentdex used in his playlist i use **Seaborn** can be downloaded [here](https://seaborn.pydata.org/installing.html).
 
 ## Datasets
-Here i'll list the files and the datasets they need:   
-*sentdex_visualization_episode11.py* can be found [here](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/source/sentdex_visualization_episode11.py):  
+Here i'll list the files and the datasets you need for them:   
+**sentdex_visualization_episode11.py** can be found [here](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/source/sentdex_visualization_episode11.py)**:** 
+- **None**    
+  
+**sentdex_stock_market_episode12.py** can be found [here](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/source/sentdex_stock_market_episode12.py)**:**  
+- **[intraQuarter](https://pythonprogramming.net/downloads/intraQuarter.zip/)**  
+- **[Yahoo Index](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/datasets/YAHOO_INDEX_GSPC.csv)** 
+  
+**sentdex_visualization_episode13.py** can be found [here](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/source/sentdex_visualization_episode13.py)**:**  
 - **None**  
   
-*sentdex_stock_market_episode12.py* can be found [here](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/source/sentdex_stock_market_episode12.py):  
-- **[intraQuarter](https://pythonprogramming.net/downloads/intraQuarter.zip/)**  
-- **[sp500_df](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/datasets/YAHOO_INDEX_GSPC.csv)** 
+**sentdex_prediction_episode15.py** can be found [here](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/source/sentdex_prediction_episode15.py)**:**  
+- **[Stock_market_full.csv](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/datasets/Stock_market_full.csv)**  
   
-*sentdex_visualization_episode13.py* can be found [here](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/source/sentdex_visualization_episode13.py):
+**sentdex_getData_episode17.py** can be found [here](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/source/sentdex_getData_episode17.py)**:**  
+- **[intraQuarter](https://pythonprogramming.net/downloads/intraQuarter.zip/)**  
+  
+**sentdex_data_episode18.py** can be found [here](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/source/sentdex_data_episode18.py)**:**  
+- **[Yahoo Index](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/datasets/YAHOO_INDEX_GSPC.csv)** 
+- **[Stock prices](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/datasets/stock_prices.zip)**
+
 
 # License & Credits
 MIT License means: https://choosealicense.com/licenses/mit/  
