@@ -32,6 +32,7 @@ More under [Datasets](#Datasets).
     
 ## Datasets  
 Here i'll list the files and the datasets you need for them:   
+--------------------------------------------------------------------
 **sentdex_visualization_episode11.py** can be found [here](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/source/sentdex_visualization_episode11.py)**:** 
 - **None**    
   
