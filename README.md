@@ -10,8 +10,8 @@ Date of last upload: *13.08.2019*
 This is a github repository for the youtube tutorial series from [sentdex](https://youtu.be/URTZ2jKCgBc). Stand: [Episode 18](https://www.youtube.com/watch?v=l68b0d92AHQ&list=PLQVvvaa0QuDd0flgGphKCej-9jp-QdzZ3&index=18).   
 This github repository is UNOFFICIAL
 go here if you want to support sentdex:  
-- [Sentdex YouTube](https://www.youtube.com/user/sentdex/)  
-- [Sentdex Website](https://pythonprogramming.net/)  
+-  [Sentdex YouTube](https://www.youtube.com/user/sentdex/)     
+-  [Sentdex Website](https://pythonprogramming.net/)    
 
 Because the sentdex tutorial playlist is from 2014. Some libaries changed and the original code which sentdex uploaded on his [forum](https://pythonprogramming.net/) doesn't work anymore (at least for me). Therefore i want to offer my code that worked for me for those who 
 it need.   
@@ -61,9 +61,9 @@ Here i'll list the files and the datasets you need for them:
   
   
 ## License & Credits
-MIT License means: [Click me](https://choosealicense.com/licenses/mit/)  
-Credits sentdex: [Click me](https://www.youtube.com/user/sentdex/)
+MIT License means: [Click me](https://choosealicense.com/licenses/mit/)   
+Credits sentdex: [Click me](https://www.youtube.com/user/sentdex/)  
 
 ## Gitpod
 If you dont want to download it because you dont know if it malicious or not or other reasons check the online ide out:  
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/LuposX/sentdex_fixed_market_stock/source)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/LuposX/sentdex_fixed_market_stock/source)  
