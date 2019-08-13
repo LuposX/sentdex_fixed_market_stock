@@ -8,9 +8,9 @@ import numpy as np
 import re
 import urllib
 
-# size to oure datasets make sure to cahnge them to your own path
-path = "../datasets/intraQuarter" # insert here your path to the intraQuarter dataset
-sp500_df = pd.read_csv("../datasets/YAHOO_INDEX_GSPC.csv") # insert here your path to the YAHOO_INDEX_GSPC.csv
+# path to oure datasets make sure to change the paths to your own paths
+path = "/datasets/intraQuarter" # insert here your path to the intraQuarter dataset
+sp500_df = pd.read_csv("/datasets/YAHOO_INDEX_GSPC.csv") # insert here your path to the YAHOO_INDEX_GSPC.csv
 
 # our function to scrap data and create a "new" datasets. "gather" are our features
 def Key_Stats(gather=["Total Debt/Equity",
@@ -109,7 +109,7 @@ def Key_Stats(gather=["Total Debt/Equity",
         ticker = each_dir.split("\\")[1]
         ticker_list.append(ticker)
         
-        # will be later usefull
+        # will later be usefull
         starting_stock_value = False
         starting_sp500_value = False
 
