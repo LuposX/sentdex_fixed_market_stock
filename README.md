@@ -1,5 +1,5 @@
-[![License](https://img.shields.io/github/license/LuposX/sentdex_fixed_market_stock)](LICENSE)  
-![Size](https://img.shields.io/github/repo-size/LuposX/sentdex_fixed_market_stock]
+[![License](https://img.shields.io/github/license/LuposX/sentdex_fixed_market_stock)](LICENSE) 
+![Size](https://img.shields.io/github/repo-size/LuposX/sentdex_fixed_market_stock)
 
 # About
 Date of first upload: *09.08.2019*  
