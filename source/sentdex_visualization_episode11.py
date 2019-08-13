@@ -37,4 +37,5 @@ custom_palette = ["red", "green"]
 
 sns.scatterplot(x, y, hue=Y, palette=custom_palette)
 sns.lineplot(xx, yy, label="non weighted div")
+plt.show()
 print(w)
