@@ -14,7 +14,9 @@ def Build_Data_Set(features=["DE Ratio",
     # reads the csv to save it in ram
     data_df = pd.read_csv("Stock_market_full.csv")
     data_df.dropna(axis=0, inplace=True)
-    data_df = data_df[:100]
+    
+    # uncomment this if you want to use less data
+    # data_df = data_df[:100]
     
     # converts our wished features to a 2d list
     X = np.array(data_df[features].values)
@@ -25,6 +27,7 @@ def Build_Data_Set(features=["DE Ratio",
         .replace("outperform", 1)
         .values)
     
+    # normalization our data 
     X = preprocessing.scale(X)
     
     return X, y
@@ -50,16 +53,17 @@ def Analyis():
     return xx, yy, X, y
 
 #--------------------------------------------------------------------------------------------------------------------------
+# calls our function
 xx, yy, X, y = Analyis()
-
 #--------------------------------------------------------------------------------------------------------------------------
+# plot figure size from in inches
 plt.figure(figsize=(9, 6))
 
-sns.scatterplot(x=X[:, 0], y=X[:, 1], hue=y)
-sns.lineplot(x=xx, y=yy)
+sns.scatterplot(x=X[:, 0], y=X[:, 1], hue=y) # plots the data points
+sns.lineplot(x=xx, y=yy) # plots the border from the classifier
 
-plt.xlabel("De Ratio")
-plt.ylabel("Tailin P/E")
-plt.title("Underperformer/Outperformer from stock companies", fontsize=16)
-plt.legend(labels=["non weighted line", "0: underperform", "1: outperform"])
-plt.show()
+plt.xlabel("De Ratio") # name our x-axis 
+plt.ylabel("Tailin P/E") # name our y-axis
+plt.title("Underperformer/Outperformer from stock companies", fontsize=16) # give our plot a title
+plt.legend(labels=["non weighted line", "0: underperform", "1: outperform"]) # adds a legend
+plt.show() # shows our plot
