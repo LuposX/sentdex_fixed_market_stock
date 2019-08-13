@@ -8,11 +8,11 @@ import numpy as np
 import re
 import urllib
 
-
+# size to oure datasets make sure to cahnge them to your own path
 path = "../datasets/intraQuarter" # insert here your path to the intraQuarter dataset
 sp500_df = pd.read_csv("../datasets/YAHOO_INDEX_GSPC.csv") # insert here your path to the YAHOO_INDEX_GSPC.csv
 
-
+# our function to scrap data and create a "new" datasets. "gather" are our features
 def Key_Stats(gather=["Total Debt/Equity",
                       'Trailing P/E',
                       'Price/Sales',
@@ -48,9 +48,11 @@ def Key_Stats(gather=["Total Debt/Equity",
                         'Short Ratio',
                         'Short % of Float',
                         'Shares Short (prior ']):
-
+    
+    # combines our path string to the dataset "Intraquarter" from sentdex with the string from the underfolder "_KeyStats"
     statspath = path+'/_KeyStats'
-    stock_list = [x[0] for x in os.walk(statspath)]
+    stock_list = [x[0] for x in os.walk(statspath)] # creates a list with all paths(underfolders) to the files
+    # we create a new dataframe with all the features in it
     df = pd.DataFrame(columns = ['Date',
                                  'Unix',
                                  'Ticker',
@@ -97,14 +99,17 @@ def Key_Stats(gather=["Total Debt/Equity",
                                  'Shares Short (prior month)',                                
                                  ##############
                                  'Status'])
-
+    
+    # we create a ticker list we're all ticker will stand in
     ticker_list = []
-
+  
+    # we iterate now over stock_list(underfolders). With "[1:10]" you can set a limit to the size of the dataset we'll create
     for each_dir in stock_list[1:10]:
         each_file = os.listdir(each_dir)
         ticker = each_dir.split("\\")[1]
         ticker_list.append(ticker)
-
+        
+        # will be later usefull
         starting_stock_value = False
         starting_sp500_value = False
 
@@ -193,9 +198,11 @@ def Key_Stats(gather=["Total Debt/Equity",
                         status = "underperform"
 
                      #--------------------------------------------------------------------------------------------------------------------------
+                    # we only append to our datframe when there are no n/a values. Comment this out for experimentation
                     if value_list.count("N/A") > 0:
                         pass
-                    else:    
+                    else:
+                      # appending all values to the dataframe
                         df = df.append({'Date':date_stamp,
                                             'Unix':unix_time,
                                             'Ticker':ticker,
@@ -252,10 +259,13 @@ def Key_Stats(gather=["Total Debt/Equity",
 
 
     #----------------------------------------------------------------------------------------------------------------------------------------
+    # gives back a String with the name of the file we save
     def save(file_format):
         return  "Stock_market." + file_format
     
+    # we save our datasets as "csv" and as "xlsx"
     df.to_excel(save("xlsx"), index=False)  
     df.to_csv(save("csv"), index=False) 
 
+# we run our function
 Key_Stats()
