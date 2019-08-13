@@ -14,8 +14,8 @@ import re
 
 # dont foget to change the paths to your own paths
 path = "atasets/intraQuarter"
-sp500_df = pd.read_csv("YAHOO_INDEX_GSPC.csv")
-stock_df = pd.read_csv("stock_prices.csv")
+sp500_df = pd.read_csv("../datasets/YAHOO_INDEX_GSPC.csv")
+stock_df = pd.read_csv("../datasets/stock_prices.csv")
 
 def Key_Stats(return_true_or_false=False, gather=["Total Debt/Equity",
                                                   'Trailing P/E',
