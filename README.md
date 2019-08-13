@@ -25,8 +25,8 @@ I also would recomend to either create the datasets you need, in the file you do
 4. run the file with the command in the cmd:  
 ``` py sentdex_XXX_XXX.py ```  
 
-**Notes:** 
--In some files you need to change this line when you want to parse the whole dataset or less:  
+**Notes:**   
+- In some files you need to change this line when you want to parse the whole dataset or less:    
 ``` for each_dir in stock_list[1:10]:```    
 - In addition to the libaries sentdex used in his playlist i use **Seaborn** can be downloaded [here](https://seaborn.pydata.org/installing.html).
 # License & Credits
