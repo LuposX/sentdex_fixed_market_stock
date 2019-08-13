@@ -86,6 +86,7 @@ def Build_Data_Set():
 #-------------------------------------------------------------------------------------------------------
 def Analyis(report=False):
     
+    # size of our test data set. You can play around with that.
     test_size = 500
     
     # recall the Build_Data_Set() function to get X, y
