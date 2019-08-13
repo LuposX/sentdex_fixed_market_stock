@@ -60,4 +60,4 @@ Credits sentdex: https://www.youtube.com/user/sentdex/
 
 # Gitpod
 If you dont want to download it because you dont know if it malicious or not or other reasons check the online ide out:  
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/LuposX/sentdex_fixed_market_stock)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/LuposX/sentdex_fixed_market_stock/source)
