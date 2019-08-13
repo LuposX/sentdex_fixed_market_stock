@@ -12,16 +12,15 @@ it need.
 
 
 # Use
-1. Download the file for the corresponding episode in the source folder.
+1. Download the file for the corresponding episode in the **source** folder.
 	
 2. Most of the files need those datasets:   
--**YAHOO_INDEX_GSPC.csv** (can be found in the dataset folder)            
+-**YAHOO_INDEX_GSPC.csv** (can be found in the **dataset** folder)            
 -**[intraQuarter](https://pythonprogramming.net/downloads/intraQuarter.zip/)** 
   
-I also would recomend to either create the datasets you need, in the file you downloaded, with other files from me or  
-to download the corresponding datasets from my folder. Else it might not work.  
+I also would recomend to either create the datasets you need, in the file you downloaded, with other python scripts from me (from the **source** folder) or to download the corresponding **datasets** from my folder. Else it might not work.  
 
-3. Make sure to change, in the files you downloaded, the lines to the location of your datasets when needed. 
+3. Make sure to change, in the files you downloaded, the lines to the location of your **datasets** when needed. 
 
 4. run the file with the command in the cmd:  
 ``` py sentdex_XXX_XXX.py ```  
