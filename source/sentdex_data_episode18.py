@@ -12,7 +12,8 @@ from datetime import datetime
 
 import re
 
-path = "C:/Users/schup/datasets/intraQuarter"
+# dont foget to change the paths to your own paths
+path = "atasets/intraQuarter"
 sp500_df = pd.read_csv("YAHOO_INDEX_GSPC.csv")
 stock_df = pd.read_csv("stock_prices.csv")
 
