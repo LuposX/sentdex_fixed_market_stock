@@ -32,7 +32,7 @@ def Stock_Prices():
                 data = quandl.get(name, trim_start="2000-12-12", trim_end="2018-12-12")
                 data[ticker.upper()] = data["Adj. Close"]
                 df = pd.concat([df, data[ticker.upper()]], axis=1)
-                
+
             except Exception as e2:
                 print("E2: ", str(e2))
 
