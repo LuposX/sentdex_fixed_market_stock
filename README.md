@@ -1,6 +1,8 @@
 # sentdex_fixed_market_stock
-Date of upload: 09.08.2019  
-This is a github repository for the youtube tutorial series from [sentdex](https://youtu.be/URTZ2jKCgBc). Stand: [Episode 18](https://www.youtube.com/watch?v=l68b0d92AHQ&list=PLQVvvaa0QuDd0flgGphKCej-9jp-QdzZ3&index=18). This is a github repository is UNOFFICIAL
+Date of first upload: 09.08.2019  
+Date of last upload: 13.08.2019    
+This is a github repository for the youtube tutorial series from [sentdex](https://youtu.be/URTZ2jKCgBc). Stand: [Episode 18](https://www.youtube.com/watch?v=l68b0d92AHQ&list=PLQVvvaa0QuDd0flgGphKCej-9jp-QdzZ3&index=18).   
+This github repository is UNOFFICIAL
 go here if you want to support sentdex:  
 - [Sentdex YouTube](https://www.youtube.com/user/sentdex/)
 - [Sentdex Website](https://pythonprogramming.net/)
@@ -10,27 +12,24 @@ it need.
 
 
 # Use
-1. Download the file *sentdex_stock_market_episode12.py*.
+1. Download the file for the corresponding episode in the source folder.
+	
+2. Most of the files need those datasets:   
+-**YAHOO_INDEX_GSPC.csv** (can be found in the dataset folder)            
+-**[intraQuarter](https://pythonprogramming.net/downloads/intraQuarter.zip/)** 
+  
+I also would recomend to either create the datasets you need, in the file you downloaded, with other files from me or  
+to download the corresponding datasets from my folder. Else it might not work.  
 
-2. Make sure you have the datasets:   
--[YAHOO_INDEX_GSPC.csv](https://github.com/michaelgu95/machine-learning-stocks/blob/master/YAHOO-INDEX_GSPC.csv)                
--[intraQuarter](https://pythonprogramming.net/downloads/intraQuarter.zip/)
-
-3. Make sure to change the lines to the location of your datasets  
-*path = "../intraQuarter" # insert here your path to the intraQuarter dataset*  
-*sp500_df = pd.read_csv(".../datasets/YAHOO_INDEX_GSPC.csv") # insert here your path to the YAHOO_INDEX_GSPC.csv*  
+3. Make sure to change, in the files you downloaded, the lines to the location of your datasets when needed. 
 
 4. run the file with the command in the cmd:  
-``` py sentdex_stock_market.py ```  
-it will create 2 files: *Stock_market.csv* and *Stock_market.xlsx*  
+``` py sentdex_XXX_XXX.py ```  
 
-**Notes:**   
-When you want to parse the whole data.   
-Make sure to change this line from:  
-``` for each_dir in stock_list[1:10]:```  
-**to:**  
-``` for each_dir in stock_list[1:]:```    
-  
+**Notes:** 
+In some files you need to change this line when you want to parse the whole dataset or less:  
+``` for each_dir in stock_list[1:10]:```    
+   
 I also would recommend to delete this line:    
 ```
 if value_list.count("N/A") > 0:    
