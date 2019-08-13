@@ -35,7 +35,7 @@ def Stock_Prices():
                 
             except Exception as e2:
                 print("E2: ", str(e2))
-    
+
     df.index.rename("Date", inplace=True)
     df.reset_index(inplace=True)
     df["Date"] = pd.to_datetime(df["Date"])
