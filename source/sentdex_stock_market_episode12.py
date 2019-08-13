@@ -2,11 +2,9 @@ import pandas as pd
 import os
 import time
 from datetime import datetime
-from time import mktime
 import numpy as np
 
 import re
-import urllib
 
 # path to oure datasets make sure to change the paths to your own paths
 path = "/datasets/intraQuarter" # insert here your path to the intraQuarter dataset
@@ -143,7 +141,7 @@ def Key_Stats(gather=["Total Debt/Equity",
                             value = np.nan
                             value_list.append(value)
                             
-                     #--------------------------------------------------------------------------------------------------------------------------
+
                     try:        
                         sp500_date = datetime.fromtimestamp(unix_time).strftime("%Y-%m-%d")
                         row = sp500_df[sp500_df["Date"] == sp500_date]
@@ -159,7 +157,7 @@ def Key_Stats(gather=["Total Debt/Equity",
                              print("Error 2: ", e2)
                              sp500_value = np.nan
                     
-                    #--------------------------------------------------------------------------------------------------------------------------
+
                     try:
                         stock_price = float(source.split('</small><big><b>')[1].split('</b></big>')[0])
                         
@@ -180,7 +178,7 @@ def Key_Stats(gather=["Total Debt/Equity",
                                  stock_price = np.nan
                                  print("Error 3: ", e3)
                     
-                    #--------------------------------------------------------------------------------------------------------------------------
+
                     if not starting_stock_value:
                         starting_stock_value = stock_price
                     if not starting_sp500_value:
@@ -191,13 +189,12 @@ def Key_Stats(gather=["Total Debt/Equity",
           
                     difference = stock_p_change-sp500_p_change
                     
-                   #--------------------------------------------------------------------------------------------------------------------------
+
                     if difference > 0:
                         status = "outperform"
                     else:
                         status = "underperform"
 
-                     #--------------------------------------------------------------------------------------------------------------------------
                     # we only append to our datframe when there are no n/a values. Comment this out for experimentation
                     if value_list.count("N/A") > 0:
                         pass
@@ -255,10 +252,8 @@ def Key_Stats(gather=["Total Debt/Equity",
                 
                 except Exception as e4:
                     print("Error 4: ", e4)
-                    pass
+                    
 
-
-    #----------------------------------------------------------------------------------------------------------------------------------------
     # gives back a String with the name of the file we save
     def save(file_format):
         return  "Stock_market." + file_format
