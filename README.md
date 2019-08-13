@@ -18,7 +18,7 @@ it need.
 -**YAHOO_INDEX_GSPC.csv** (can be found in the **dataset** folder)            
 -**[intraQuarter](https://pythonprogramming.net/downloads/intraQuarter.zip/)** 
   
-I also would recomend to either create the datasets you need, in the file you downloaded, with other python scripts from me (from the **source** folder) or to download the corresponding **datasets** from my folder. Else it might not work.  
+I also would recomend to either create the datasets you need, in the file you downloaded, with other python scripts from me (from the **source** folder) or to download the corresponding **datasets** from my folder. Do not use your own Datasets.  
 
 3. Make sure to change, in the files you downloaded, the lines to the location of your **datasets** when needed. 
 
