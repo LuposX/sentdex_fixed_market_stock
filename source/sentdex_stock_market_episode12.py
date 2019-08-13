@@ -131,16 +131,14 @@ def Key_Stats(gather=["Total Debt/Equity",
                             elif "M" in value:
                                 value = float(value.replace("M",''))*1000000
 
-                            value_list.append(value)
-                            
+                            value_list.append(value)              
                             
                         except Exception as e1:
                             # print("Error 1: ", e1)
                             value = np.nan
                             value_list.append(value)
                             
-
-        
+                     #--------------------------------------------------------------------------------------------------------------------------
                     try:        
                         sp500_date = datetime.fromtimestamp(unix_time).strftime("%Y-%m-%d")
                         row = sp500_df[sp500_df["Date"] == sp500_date]
@@ -155,53 +153,46 @@ def Key_Stats(gather=["Total Debt/Equity",
                              # print(str(e),'a;lsdkfh',file,ticker)
                              print("Error 2: ", e2)
                              sp500_value = np.nan
-
+                    
+                    #--------------------------------------------------------------------------------------------------------------------------
                     try:
                         stock_price = float(source.split('</small><big><b>')[1].split('</b></big>')[0])
+                        
                     except Exception as e:
-                        #    <span id="yfs_l10_afl">43.27</span>
                         try:
                             stock_price = (source.split('</small><big><b>')[1].split('</b></big>')[0])
                             stock_price = re.search(r'(\d{1,8}\.\d{1,8})',stock_price)
                             stock_price = float(stock_price.group(1))
-
-                            #print(stock_price)
+                            
                         except:
                             try:
                                 stock_price = (source.split('<span class="time_rtq_ticker">')[1].split('</span>')[0])
                                 stock_price = re.search(r'(\d{1,8}\.\d{1,8})',stock_price)
                                 stock_price = float(stock_price.group(1))
+                                
                             except Exception as e3:
                                 # print(str(e),'a;lsdkfh',file,ticker)
                                  stock_price = np.nan
                                  print("Error 3: ", e3)
-
-                            #print('Latest:',stock_price)
-
-                            #print('stock price',str(e),ticker,file)
-                            #time.sleep(15)
-                        
-                    #print("stock_price:",stock_price,"ticker:", ticker)
                     
+                    #--------------------------------------------------------------------------------------------------------------------------
                     if not starting_stock_value:
                         starting_stock_value = stock_price
                     if not starting_sp500_value:
                         starting_sp500_value = sp500_value
 
-                    
-                    
                     stock_p_change = ((stock_price - starting_stock_value) / starting_stock_value) * 100
                     sp500_p_change = ((sp500_value - starting_sp500_value) / starting_sp500_value) * 100
-
-                    
+          
                     difference = stock_p_change-sp500_p_change
-
+                    
+                   #--------------------------------------------------------------------------------------------------------------------------
                     if difference > 0:
                         status = "outperform"
                     else:
                         status = "underperform"
 
-
+                     #--------------------------------------------------------------------------------------------------------------------------
                     if value_list.count("N/A") > 0:
                         pass
                     else:    
