@@ -30,42 +30,6 @@ to download the corresponding datasets from my folder. Else it might not work.
 In some files you need to change this line when you want to parse the whole dataset or less:  
 ``` for each_dir in stock_list[1:10]:```    
    
-I also would recommend to delete this line:    
-```
-if value_list.count("N/A") > 0:    
-    pass 
-``` 
-
-
-**Image without N/A values:**  
-![Without N/A values](/images/image_without_na_values.png)
-
-**Image with N/A values:**  
-![Without N/A values](/images/image_with_na_values.png)
-           
-
-# Changes
-**Bug Fixes:**
-- Changed the line: *row = sp500_df\[(sp500_df.index == sp500_date)\]*  
-  **to:** *row = sp500\[sp500\["Date"\] == sp500_date]*
-
-- Changed the line: *sp500_value = float(row\["Adjusted Close"\])*  
-  **to:** *sp500_value = float(row\["Adj Close"\])*  
-  \(is necessary when you got your YAHOO_INDEX_GSPC.csv from here:   
-  https://github.com/michaelgu95/machine-learning-stocks/blob/master/YAHOO-INDEX_GSPC.csv)
-  
- - Changed the line: *'Shares Short (prior '*
-  to: *'Shares Short (prior month)'*
-  
-  
-  
-**Features:**
-- added df.to_excel() at the end to also save the file as xlsx format
-- round sp500_value to 4 decimal points 
-- added a extra ```try except```for better debuging
-- changed unixtime from *float* to *int*
-
-
 # License & Credits
 MIT License means: https://choosealicense.com/licenses/mit/  
 Credits sentdex: https://www.youtube.com/user/sentdex/
