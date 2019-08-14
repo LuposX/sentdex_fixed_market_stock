@@ -5,9 +5,9 @@
 # About
 
 Date of first upload: *09.08.2019*  
-Date of last upload: *13.08.2019*
+Date of last upload: *14.08.2019*
   
-This is a github repository for the youtube tutorial series from [sentdex](https://youtu.be/URTZ2jKCgBc). Stand: [Episode 18](https://www.youtube.com/watch?v=l68b0d92AHQ&list=PLQVvvaa0QuDd0flgGphKCej-9jp-QdzZ3&index=18).   
+This is a github repository for the youtube tutorial series from [sentdex](https://youtu.be/URTZ2jKCgBc). Stand: [Episode 19](https://www.youtube.com/watch?v=1dk9NO2M41E&list=PLQVvvaa0QuDd0flgGphKCej-9jp-QdzZ3&index=19).   
 This github repository is UNOFFICIAL
 go here if you want to support sentdex:  
 -  [Sentdex YouTube](https://www.youtube.com/user/sentdex/)     
@@ -57,8 +57,12 @@ Here i'll list the files and the datasets you need for them:
 -  **[intraQuarter](https://pythonprogramming.net/downloads/intraQuarter.zip/)**     
   
 **sentdex_data_episode18.py** can be found [here](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/source/sentdex_data_episode18.py)**:**    
--  **[Yahoo Index](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/datasets/YAHOO_INDEX_GSPC.csv)**     
--  **[Stock prices](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/datasets/stock_prices.zip)**    
+-  **[Yahoo Index](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/datasets/YAHOO_INDEX_GSPC.csv)**  
+-  **[Stock prices](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/datasets/stock_prices.zip)**  
+
+**sentdex_data_episode19.py** can be found [here](https://github.com/LuposX/sentdex_fixed_market_stock/blob/test/source/sentdex_prediction_episode19.py)**:**   
+-   **[Stock_market_acc_WITH_NA.csv](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/datasets/Stock_market_acc_WITH_NA.csv)**    
+-   **[Stock_market_acc_NO_NA.csv](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/datasets/Stock_market_acc_NO_NA.csv)**     
   
   
 ## License & Credits
