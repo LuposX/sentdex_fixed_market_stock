@@ -134,26 +134,26 @@ def Key_Stats(return_true_or_false=False, gather=["Total Debt/Equity",
                                 value = float(value.replace("M",''))*1000000
 
                             value_list.append(value)
- 
 
-                        except Exception as e1:
+
+                        except:
                             # print("Error 1: ", e1)
                             value = np.nan
                             value_list.append(value)
 
-                    try:        
+                    try:
                         sp500_date = datetime.fromtimestamp(unix_time).strftime("%Y-%m-%d")
                         row = sp500_df[(sp500_df["Date"] == sp500_date)]
                         sp500_value = float(row["Adj Close"])
                         sp500_value = round(sp500_value, 4)  
-  
+
                     except:
                         try:
                             sp500_date = datetime.fromtimestamp(unix_time - 259200).strftime('%Y-%m-%d')
                             row = sp500_df[(sp500_df["Date"] == sp500_date)]
                             sp500_value = float(row["Adj Close"])
                             sp500_value = round(sp500_value, 4) 
-    
+
                         except Exception as e2:
                              # print(str(e),'a;lsdkfh',file,ticker)
                              print("sp500: ", e2)
@@ -184,7 +184,7 @@ def Key_Stats(return_true_or_false=False, gather=["Total Debt/Equity",
                     try:
                         stock_price_1y = datetime.fromtimestamp(one_year_later).strftime('%Y-%m-%d')
                         row = stock_df[(stock_df["Date"] == stock_price_1y)][ticker.upper()]
-                        stock_1y_value = round(float(row),2)    
+                        stock_1y_value = round(float(row),2)
 
                     except:
                         try:
@@ -203,7 +203,7 @@ def Key_Stats(return_true_or_false=False, gather=["Total Debt/Equity",
                         stock_price = datetime.fromtimestamp(unix_time).strftime('%Y-%m-%d')
                         row = stock_df[(stock_df["Date"] == stock_price)][ticker.upper()]
                         stock_price = round(float(row), 2)    
- 
+
                     except:
                         try:
                             stock_price = datetime.fromtimestamp(unix_time - 259200).strftime('%Y-%m-%d')
@@ -229,7 +229,7 @@ def Key_Stats(return_true_or_false=False, gather=["Total Debt/Equity",
                     except:
                         stock_p_change = np.nan
                         sp500_p_change = np.nan
-                    
+
                     try:
                         difference = stock_p_change - sp500_p_change
                     except:
@@ -244,7 +244,7 @@ def Key_Stats(return_true_or_false=False, gather=["Total Debt/Equity",
                     # only appending when there are no "N/A" values
                     if value_list.count("N/A") > 0 | value_list.count(np.nan) > 0 | value_list.isnull().count() > 0:
                         pass
-                    else:    
+                    else:
                         df = df.append({'Date':date_stamp,
                                             'Unix':unix_time,
                                             'Ticker':ticker,
@@ -292,8 +292,8 @@ def Key_Stats(return_true_or_false=False, gather=["Total Debt/Equity",
                                              'Shares Short (prior month)':value_list[34],
                                              'Status':status},
                                              ignore_index=True)
-           
-                    
+
+
 
                 except Exception as e6:
                     print("e6: ", e6)
@@ -304,7 +304,7 @@ def Key_Stats(return_true_or_false=False, gather=["Total Debt/Equity",
     def save(file_format):
         return  "Stock_market_acc_NO_NA." + file_format
 
-    # df.to_excel(save("xlsx"), index=False)  
+    # df.to_excel(save("xlsx"), index=False)
     df.to_csv(save("csv"), index=False)
 
     if return_true_or_false:
