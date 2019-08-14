@@ -33,7 +33,7 @@ More under [Datasets](#Datasets).
 -   In some files you need to change this line when you want to parse the whole dataset or less:      
 ``` for each_dir in stock_list[1:10]:```  
 
--  In addition to the libaries sentdex used in his playlist i use **Seaborn** can be downloaded [here](https://seaborn.pydata.org/installing.html).    
+-   In addition to the libaries sentdex used in his playlist i use **Seaborn** can be downloaded [here](https://seaborn.pydata.org/installing.html).    
   
     
 ## Datasets 
