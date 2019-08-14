@@ -42,11 +42,11 @@ FEATURES =  ['DE Ratio',
              'Shares Short (prior month)']
 
 def Build_Data_Set():
-    
+
     # reads the csv to save it in ram
     data_df = pd.read_csv("Stock_market_acc_WITH_NA.csv")
     # data_df.dropna(axis=0, inplace=True)
-    
+
     # data_df = data_df[:100]
 
     # shuffles our data
