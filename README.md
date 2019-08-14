@@ -1,6 +1,5 @@
 [![License](https://img.shields.io/github/license/LuposX/sentdex_fixed_market_stock)](LICENSE) 
 ![Size](https://img.shields.io/github/repo-size/LuposX/sentdex_fixed_market_stock)
-[![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](hhttps://github.com/LuposX/sentdex_fixed_market_stock/issues/)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/7d14e2763577432b9afcbe1efffd4d52)](https://www.codacy.com/app/LuposX/sentdex_fixed_market_stock?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=LuposX/sentdex_fixed_market_stock&amp;utm_campaign=Badge_Grade)
 
 # About
