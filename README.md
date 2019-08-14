@@ -69,5 +69,5 @@ Credits sentdex: [Click me](https://www.youtube.com/user/sentdex/)
 ## Gitpod
 
 If you dont want to download it because you dont know if it malicious or not or other reasons check the online IDE out:  
-Disclaimer: not every file works. Because i didn't upload the **intraQuart** dataset on github and the **stock_price** in a zip is because of the size.  
+Disclaimer: not every file works. Because i didn't upload the **intraQuart** dataset on github and the **stock_price** dataset is in a zip due to the size.  
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/LuposX/sentdex_fixed_market_stock/source)  
