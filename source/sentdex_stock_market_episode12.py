@@ -46,7 +46,7 @@ def Key_Stats(gather=["Total Debt/Equity",
                         'Short Ratio',
                         'Short % of Float',
                         'Shares Short (prior ']):
-    
+
     # combines our path string to the dataset "Intraquarter" from sentdex with the string from the underfolder "_KeyStats"
     statspath = path+'/_KeyStats'
     stock_list = [x[0] for x in os.walk(statspath)] # creates a list with all paths(underfolders) to the files
@@ -94,23 +94,23 @@ def Key_Stats(gather=["Total Debt/Equity",
                                  'Shares Short (as of',
                                  'Short Ratio',
                                  'Short % of Float',
-                                 'Shares Short (prior month)',                                
+                                 'Shares Short (prior month)',
                                  'Status'])
-    
+
     # we create a ticker list we're all ticker will stand in
     ticker_list = []
-  
+
     # we iterate now over stock_list(underfolders). With "[1:10]" you can set a limit to the size of the dataset we'll create
     for each_dir in stock_list[1:10]:
         each_file = os.listdir(each_dir)
         ticker = each_dir.split("\\")[1]
         ticker_list.append(ticker)
-        
+
         # will later be usefull
         starting_stock_value = False
         starting_sp500_value = False
 
-        
+
         if len(each_file) > 0:
             for file in each_file:
                 date_stamp = datetime.strptime(file, '%Y%m%d%H%M%S.html')
@@ -133,15 +133,15 @@ def Key_Stats(gather=["Total Debt/Equity",
                             elif "M" in value:
                                 value = float(value.replace("M",''))*1000000
 
-                            value_list.append(value)              
+                            value_list.append(value)
 
                         except Exception as e1:
                             # print("Error 1: ", e1)
                             value = np.nan
                             value_list.append(value)
-                            
 
-                    try:        
+
+                    try:
                         sp500_date = datetime.fromtimestamp(unix_time).strftime("%Y-%m-%d")
                         row = sp500_df[sp500_df["Date"] == sp500_date]
                         sp500_value = float(row["Adj Close"])
@@ -155,28 +155,28 @@ def Key_Stats(gather=["Total Debt/Equity",
                              # print(str(e),'a;lsdkfh',file,ticker)
                              print("Error 2: ", e2)
                              sp500_value = np.nan
-                    
+
 
                     try:
                         stock_price = float(source.split('</small><big><b>')[1].split('</b></big>')[0])
-                        
-                    except Exception as e:
+
+                    except:
                         try:
                             stock_price = (source.split('</small><big><b>')[1].split('</b></big>')[0])
                             stock_price = re.search(r'(\d{1,8}\.\d{1,8})',stock_price)
                             stock_price = float(stock_price.group(1))
-                            
+
                         except:
                             try:
                                 stock_price = (source.split('<span class="time_rtq_ticker">')[1].split('</span>')[0])
                                 stock_price = re.search(r'(\d{1,8}\.\d{1,8})',stock_price)
                                 stock_price = float(stock_price.group(1))
-                                
+
                             except Exception as e3:
                                 # print(str(e),'a;lsdkfh',file,ticker)
                                  stock_price = np.nan
                                  print("Error 3: ", e3)
-                    
+
 
                     if not starting_stock_value:
                         starting_stock_value = stock_price
@@ -185,9 +185,9 @@ def Key_Stats(gather=["Total Debt/Equity",
 
                     stock_p_change = ((stock_price - starting_stock_value) / starting_stock_value) * 100
                     sp500_p_change = ((sp500_value - starting_sp500_value) / starting_sp500_value) * 100
-          
+
                     difference = stock_p_change-sp500_p_change
-                    
+
 
                     if difference > 0:
                         status = "outperform"
@@ -246,7 +246,7 @@ def Key_Stats(gather=["Total Debt/Equity",
                                              'Shares Short (prior month)':value_list[34],
                                              'Status':status},
                                              ignore_index=True)
-         
+
 
                 except Exception as e4:
                     print("Error 4: ", e4)
