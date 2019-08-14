@@ -135,7 +135,7 @@ def Key_Stats(gather=["Total Debt/Equity",
 
                             value_list.append(value)
 
-                        except Exception as e1:
+                        except:
                             # print("Error 1: ", e1)
                             value = np.nan
                             value_list.append(value)
