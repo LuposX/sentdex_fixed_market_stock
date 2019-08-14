@@ -167,7 +167,7 @@ def Key_Stats(return_true_or_false=False, gather=["Total Debt/Equity",
                         sp500_1y = datetime.fromtimestamp(one_year_later).strftime("%Y-%m-%d")
                         row = sp500_df[(sp500_df["Date"] == sp500_1y)]
                         sp500_1y_value = float(row["Adj Close"])
-                        sp500_value = round(sp500_value, 4) 
+                        sp500_value = round(sp500_value, 4)
 
                     except:
                         try:
@@ -202,7 +202,7 @@ def Key_Stats(return_true_or_false=False, gather=["Total Debt/Equity",
                     try:
                         stock_price = datetime.fromtimestamp(unix_time).strftime('%Y-%m-%d')
                         row = stock_df[(stock_df["Date"] == stock_price)][ticker.upper()]
-                        stock_price = round(float(row), 2)    
+                        stock_price = round(float(row), 2)
 
                     except:
                         try:
