@@ -109,4 +109,4 @@ def Analyis(report=False):
 
 #-------------------------------------------------------------------------------------------------------
 # calls our function and saves x and y (if you need them) you can turn on/off the report mode
-X, y = Analyis(report=True) 
+X, y = Analyis(report=True)
