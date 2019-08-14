@@ -27,7 +27,7 @@ def Build_Data_Set(features=["DE Ratio",
         .replace("outperform", 1)
         .values)
 
-    # normalization our data 
+    # normalization our data
     X = preprocessing.scale(X)
 
     return X, y
@@ -62,7 +62,7 @@ plt.figure(figsize=(9, 6))
 sns.scatterplot(x=X[:, 0], y=X[:, 1], hue=y) # plots the data points
 sns.lineplot(x=xx, y=yy) # plots the border from the classifier
 
-plt.xlabel("De Ratio") # name our x-axis 
+plt.xlabel("De Ratio") # name our x-axis
 plt.ylabel("Tailin P/E") # name our y-axis
 plt.title("Underperformer/Outperformer from stock companies", fontsize=16) # give our plot a title
 plt.legend(labels=["non weighted line", "0: underperform", "1: outperform"]) # adds a legend
