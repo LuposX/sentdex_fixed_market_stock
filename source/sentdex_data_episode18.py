@@ -223,10 +223,17 @@ def Key_Stats(return_true_or_false=False, gather=["Total Debt/Equity",
                             # print(" ")
 
 
-                    stock_p_change = round((((stock_1y_value - stock_price) / stock_price) * 100), 2)
-                    sp500_p_change = round((((sp500_1y_value - sp500_value) / sp500_value) * 100), 2)
- 
-                    difference = stock_p_change - sp500_p_change
+                    try:
+                        stock_p_change = round((((stock_1y_value - stock_price) / stock_price) * 100), 2)
+                        sp500_p_change = round((((sp500_1y_value - sp500_value) / sp500_value) * 100), 2)
+                    except:
+                        stock_p_change = np.nan
+                        sp500_p_change = np.nan
+                    
+                    try:
+                        difference = stock_p_change - sp500_p_change
+                    except:
+                        difference = np.nan
 
                     if difference > 0:
                         status = "outperform"
@@ -235,7 +242,7 @@ def Key_Stats(return_true_or_false=False, gather=["Total Debt/Equity",
 
 
                     # only appending when there are no "N/A" values
-                    if value_list.count("N/A") > 0:
+                    if value_list.count("N/A") > 0 | value_list.count(np.nan) > 0 | value_list.isnull().count() > 0:
                         pass
                     else:    
                         df = df.append({'Date':date_stamp,
