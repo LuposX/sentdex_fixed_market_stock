@@ -83,8 +83,8 @@ Here i'll list the prerequisites you need for each file:
 **sentdex_data_episode23.py** can be found [here](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/source/sentdex_prediction_episode23.py) it needs:   
 -   **[Stock_market_acc_WITH_NA.csv](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/datasets/Stock_market_acc_WITH_NA.csv)**    
 -   **[Stock_market_acc_NO_NA.csv](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/datasets/Stock_market_acc_NO_NA.csv)**
--   **[forward_sample_NO_NA.csv]()**    
--   **[forward_sample_With_NA.csv]()**
+-   **[forward_sample_NO_NA.csv](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/datasets/forward_sample_NO_NA.csv)**    
+-   **[forward_sample_With_NA.csv](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/datasets/forward_sample_WITH_NA.csv)**
   
 </details> 
 
