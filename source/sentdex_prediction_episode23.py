@@ -1,9 +1,12 @@
+# for episode 23
+
 import pandas as pd
 import numpy as np
 
 import sklearn
 from sklearn import svm, preprocessing
 from sklearn.metrics import classification_report, accuracy_score
+
 
 FEATURES =  ['DE Ratio',
              'Trailing P/E',
@@ -45,8 +48,8 @@ FEATURES =  ['DE Ratio',
 def Build_Data_Set():
 
     # reads the csv to save it in ram
-    data_df = pd.read_csv("../datasets/Stock_market_acc_WITH_NA.csv")
-    # data_df.dropna(axis=0, inplace=True) # drops every cell with "na" value
+    data_df = pd.read_csv("Stock_market_acc_NO_NA.csv")
+    # data_df.dropna(axis=0, inplace=True)
 
     # shuffles our data
     data_df = sklearn.utils.shuffle(data_df)
@@ -65,6 +68,8 @@ def Build_Data_Set():
 
     # preprocessing your data | normalization
     X = preprocessing.scale(data_df[FEATURES])
+    scaler = preprocessing.StandardScaler()
+    X = scaler.fit_transform(X)
 
     z = np.array(data_df[["stock_p_change", "sp500_p_change"]])
 
@@ -74,7 +79,7 @@ def Build_Data_Set():
 def Analyis(report=False):
 
     # how big our test size is (number of examples)
-    test_size = 1000
+    test_size = 500
 
     # how much we invest in the stocks
     invest_amount = 10000
@@ -84,11 +89,9 @@ def Analyis(report=False):
 
     # call the Build_Data_Set() function to get X, y
     X, y, z = Build_Data_Set()
-
-    # comunication is important
-    print("X std: ", X.std()) # since we preprocessed our data "std" should be close to 1.0
-    print("len of x: ", len(X)) # the len of our example size
-    print("------------------------------------------")
+    print("len of x: ", len(X))
+    print("X std: ", X.std()) # should be close to 1.0 after normalization
+    print("--------------------------------------------------------------------------")
 
     # build our svm model
     clf = svm.SVC(kernel="linear", C=1.0)
@@ -110,14 +113,8 @@ def Analyis(report=False):
 
     #prints classification report
     if report: print(classification_report(y[-test_size:], pred))
+    if report: print("--------------------------------------------------------------------------")
     if report: print("Model accuracy: ", accuracy_score(y[-test_size:], pred))
-    if report: print(" ")
-
-    # prints How much profit we would make
-    print("Total Trades: ", total_invest)
-
-    print("Ending with strategy: ", if_strat)
-    print("Ending with Market: ", if_market)
 
     compared = round(((if_strat - if_market) / if_market * 100.0), 3)
     do_nothing = total_invest * invest_amount
@@ -125,8 +122,29 @@ def Analyis(report=False):
     avg_market = round(((if_market - do_nothing) / do_nothing) * 100.0, 3)
     avg_strat = round(((if_strat - do_nothing) / do_nothing) * 100.0, 3)
 
-    print("Compared to market, we earn: ", str(compared) + "% more")
-    print("Average investment return: ", str(avg_strat) + "%")
-    print("Average market return: ", str(avg_market) + "%")
+    data_df = pd.read_csv("forward_sample_NO_NA.csv")
+    data_df = data_df.fillna(0)
 
-Analyis(report=True)
+    # converts our wished features to a 2d list
+    X = np.array(data_df[FEATURES].values.tolist())
+
+    X = preprocessing.scale(data_df[FEATURES])
+
+    z = data_df["Ticker"].values.tolist()
+
+    invest_list = []
+
+    for i in range(len(X)):
+        p = clf.predict([X[i]])[0]
+        if p == 1:
+            #print("z[i]: ", z[i])
+            invest_list.append(z[i])
+
+    print("len invest_list: ", len(invest_list), "of", data_df["Ticker"].count())
+    if report: print("--------------------------------------------------------------------------")
+    print("invest_list: ")
+    print(invest_list)
+
+    return X, y
+
+X, y = Analyis(report=True)
