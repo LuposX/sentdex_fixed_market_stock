@@ -3,14 +3,8 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from matplotlib import style
-import seaborn as sns
-from pandas.plotting import register_matplotlib_converters
 
 import os
-import time
-from datetime import datetime
-
 import re
 
 path = "/datasets/intraQuarter"
@@ -125,8 +119,7 @@ def Forward(gather=["Total Debt/Equity",
                     value_list.append(value)
 
 
-                except Exception as e1:
-                    # print("Error 1: ", e1)
+                except:
                     value = np.nan
                     value_list.append(value)
 
