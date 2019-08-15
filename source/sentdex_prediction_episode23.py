@@ -2,19 +2,11 @@
 
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
-from matplotlib import style
-import seaborn as sns
-import statistics
 
 import sklearn
 from sklearn import svm, preprocessing
-from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
-sns.set_style("darkgrid")
+from sklearn.metrics import classification_report, accuracy_score
 
-import warnings
-from sklearn.exceptions import DataDimensionalityWarning
-warnings.filterwarnings(action='ignore', category=DataDimensionalityWarning)
 
 FEATURES =  ['DE Ratio',
              'Trailing P/E',
@@ -68,7 +60,7 @@ def Build_Data_Set():
     # converts our wished features to a 2d list
     X = np.array(data_df[FEATURES].values.tolist())
 
-    # replaces our status thorught 0 or 1 | needs to be binar to use it 
+    # replaces our status thorught 0 or 1 | needs to be binar to use it
     y = (data_df["Status"]
         .replace("underperform", 0)
         .replace("outperform", 1)
@@ -131,7 +123,7 @@ def Analyis(report=False):
     avg_strat = round(((if_strat - do_nothing) / do_nothing) * 100.0, 3)
 
     data_df = pd.read_csv("forward_sample_NO_NA.csv")
-    data_df = data_df.fillna(0) 
+    data_df = data_df.fillna(0)
 
     # converts our wished features to a 2d list
     X = np.array(data_df[FEATURES].values.tolist())
