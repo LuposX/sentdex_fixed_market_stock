@@ -62,8 +62,8 @@ Here i'll list the prerequisites you need for each file:
 
 
 **sentdex_data_episode18.py** can be found [here](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/source/sentdex_data_episode18.py) it needs:   
-- **[Yahoo Index](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/datasets/YAHOO_INDEX_GSPC.csv)**  
-- **[Stock prices](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/datasets/stock_prices.zip)**  
+-   **[Yahoo Index](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/datasets/YAHOO_INDEX_GSPC.csv)**  
+-   **[Stock prices](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/datasets/stock_prices.zip)**  
 
 **sentdex_data_episode19.py** can be found [here](https://github.com/LuposX/sentdex_fixed_market_stock/blob/episode21-23/source/sentdex_prediction_episode19.py) it needs:   
 -   **[Stock_market_acc_WITH_NA.csv](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/datasets/Stock_market_acc_WITH_NA.csv)**    
