@@ -16,7 +16,10 @@ def Check_Yahoo():
 
             # for html | sentdex way
             link1 = "https://finance.yahoo.com/quote/"+e.upper()+"/key-statistics?p="+e.upper()
-            resp1 = urllib.request.urlopen(link1).read()
+            if url.lower().startswith('http'):
+                resp1 = urllib.request.urlopen(link1).read()
+            else:
+                raise ValueError from None
             save1 = "episode21/html/"+str(e)+".html"
             store1 = open(save1, "w")
             store1.write(str(resp1))
@@ -24,7 +27,10 @@ def Check_Yahoo():
 
             # for json | tomgs way: https://github.com/tomgs/sentdexworkarounds
             link2 = "https://query2.finance.yahoo.com/v10/finance/quoteSummary/"+e.upper()+"?modules=assetProfile,financialData,defaultKeyStatistics,calendarEvents,incomeStatementHistory,cashflowStatementHistory,balanceSheetHistory"
-            resp2 = urllib.request.urlopen(link2).read()
+            if url.lower().startswith('http'):
+                resp2 = urllib.request.urlopen(link2).read()
+            else:
+                raise ValueError from None
             save2 = "episode21/json/"+str(e)+".json"
             store2 = open(save2, "w")
             store2.write(str(resp2))
