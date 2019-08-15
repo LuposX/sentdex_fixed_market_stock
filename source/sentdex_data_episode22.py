@@ -2,7 +2,6 @@
 
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
 
 import os
 import re
@@ -109,7 +108,6 @@ def Forward(gather=["Total Debt/Equity",
                     value = re.search(regex, source)
                     value = (value.group(1))
 
-
                     if "B" in value:
                         value = float(value.replace("B",''))*1000000000
 
@@ -117,7 +115,6 @@ def Forward(gather=["Total Debt/Equity",
                         value = float(value.replace("M",''))*1000000
 
                     value_list.append(value)
-
 
                 except:
                     value = np.nan
