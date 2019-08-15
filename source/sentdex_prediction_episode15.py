@@ -1,11 +1,9 @@
 import pandas as pd
 import numpy as np
-import seaborn as sns
 
 import sklearn
 from sklearn import svm, preprocessing
 from sklearn.metrics import classification_report
-sns.set_style("darkgrid")
 
 #-------------------------------------------------------------------------------------------------------
 # our features
