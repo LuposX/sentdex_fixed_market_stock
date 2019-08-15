@@ -9,13 +9,13 @@ path = "/datasets/intraQuarter"
 def Check_Yahoo():
     statspath = path + "/_KeyStats"
     stock_list = [x[0] for x in os.walk(statspath)]
-    
+
     # Added a counter to call out how many files we've already added
     counter = 0
     for e in stock_list[1:]:
         try:
-            e = e.replace("C:/Users/schup/datasets/intraQuarter/_KeyStats\\", "")
-            
+            e = e.replace("/datasets/intraQuarter/_KeyStats\\", "")
+
             # for html | sentdex way
             link1 = "https://finance.yahoo.com/quote/"+e.upper()+"/key-statistics?p="+e.upper()
             resp1 = urllib.request.urlopen(link1).read()
@@ -31,12 +31,12 @@ def Check_Yahoo():
             store2 = open(save2, "w")
             store2.write(str(resp2))
             store2.close()
-            
+
             #Print some stuff
             counter +=1
             print("We processed: " + str(counter) + " Files.")
             print("We're are in the directory: ", str(e))
-            
+
         except Exception as e:
             print(str(e))
             time.sleep(2)
