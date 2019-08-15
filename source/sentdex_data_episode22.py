@@ -94,18 +94,18 @@ def Forward(gather=["Total Debt/Equity",
                                  'Shares Short (as of',
                                  'Short Ratio',
                                  'Short % of Float',
-                                 'Shares Short (prior month)',                                
+                                 'Shares Short (prior month)',
                                  ##############
                                  'Status'])
-    
+
     file_list = os.listdir("episode21/html")
-    
-    for each_file in file_list[:]:    
-        
+
+    for each_file in file_list[:]:
+
         ticker = each_file.split(".html")[0]
         full_file_path = "episode21/html/" + str(each_file)
         source = open(full_file_path, "r").read()
-        
+
         try:
             value_list = []
 
@@ -129,7 +129,7 @@ def Forward(gather=["Total Debt/Equity",
                     # print("Error 1: ", e1)
                     value = np.nan
                     value_list.append(value)
-            
+
             # communication is the key
             print("Last processed file: ", str(ticker) + ".html")
 
@@ -197,8 +197,8 @@ def Forward(gather=["Total Debt/Equity",
     # saving the file with the right format
     def save(file_format):
         return  "forward_sample_WITH_NA." + file_format
-    
-    # df.to_excel(save("xlsx"), index=False)  
-    df.to_csv(save("csv"), index=False)   
+
+    # df.to_excel(save("xlsx"), index=False)
+    df.to_csv(save("csv"), index=False)
 
 Forward()
