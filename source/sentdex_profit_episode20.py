@@ -3,7 +3,7 @@ import numpy as np
 
 import sklearn
 from sklearn import svm, preprocessing
-from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
+from sklearn.metrics import classification_report, accuracy_score
 
 FEATURES =  ['DE Ratio',
              'Trailing P/E',
@@ -59,7 +59,7 @@ def Build_Data_Set():
     # converts our wished features to a 2d list
     X = np.array(data_df[FEATURES].values.tolist())
 
-    # replaces our status thorught 0 or 1 | needs to be binar to use it 
+    # replaces our status thorught 0 or 1 | needs to be binar to use it
     y = (data_df["Status"]
         .replace("underperform", 0)
         .replace("outperform", 1)
