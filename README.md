@@ -80,7 +80,7 @@ Here i'll list the prerequisites you need for each file:
 -   **[intraQuarter](https://pythonprogramming.net/downloads/intraQuarter.zip/)**   
 -   **[html yahoo current stock](https://drive.google.com/drive/folders/1gCjk0cv28Lu1ooYPe2X7j0c-2xT0HDBc?usp=sharing)**
   
-**sentdex_data_episode23.py** can be found [here](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/source/sentdex_profit_episode20.py) it needs:   
+**sentdex_data_episode23.py** can be found [here](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/source/sentdex_prediction_episode23.py) it needs:   
 -   **[Stock_market_acc_WITH_NA.csv](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/datasets/Stock_market_acc_WITH_NA.csv)**    
 -   **[Stock_market_acc_NO_NA.csv](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/datasets/Stock_market_acc_NO_NA.csv)**
 -   **[forward_sample_NO_NA.csv]()**    
