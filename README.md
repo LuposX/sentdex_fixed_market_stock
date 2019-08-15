@@ -22,7 +22,7 @@ If you have any Issued please open a **[Issue](https://github.com/LuposX/sentdex
 1.  Download the file for the corresponding episode in the **source** folder.
 
 2.  I would recomend to either create the datasets you need, in the file you downloaded, with other python scripts from me (from the **source** folder) or to download the corresponding **datasets** from my folder. DO NOT USE YOUR OWN DATASETS IT MIGHT NOT WORK.
-More under [Datasets](#Datasets). 
+More under [Prerequisite](#Prerequisite). 
 
 3.  Make sure to change, in the files you downloaded, the lines to the location of your **datasets** when needed. 
 
