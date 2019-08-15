@@ -36,9 +36,9 @@ More under [Datasets](#Datasets).
 -   In addition to the libaries sentdex used in his playlist i use **Seaborn** can be downloaded [here](https://seaborn.pydata.org/installing.html).    
   
     
-## Prerequisite 
+## Prerequisites 
 
-Here i'll list the prerequisite you need for each file:   
+Here i'll list the prerequisites you need for each file:   
 <details>
   <summary>Click to expand and to see the necessary prerequisite for each file.</summary>
   **sentdex_visualization_episode11.py** can be found [here](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/source    /sentdex_visualization_episode11.py) it needs:     
