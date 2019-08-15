@@ -1,10 +1,9 @@
 import pandas as pd
 import numpy as np
-import statistics
 
 import sklearn
 from sklearn import svm, preprocessing
-from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
+from sklearn.metrics import classification_report, accuracy_score
 
 FEATURES =  ['DE Ratio',
              'Trailing P/E',
