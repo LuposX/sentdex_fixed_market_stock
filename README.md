@@ -38,7 +38,8 @@ More under [Prerequisite](#Prerequisite).
     
 ## Prerequisites 
 
-Here i'll list the prerequisites you need for each file:   
+Here i'll list the prerequisites you need for each file. You can find them in the dataset folder on this repo or when u click on corresponding link.
+	  
 <details>
   <summary>Click to expand and to see the necessary prerequisite for each file.</summary>  
     
