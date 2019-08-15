@@ -1,5 +1,3 @@
-import pandas as pd
-import numpy as np
 import urllib.request
 import os
 import time
@@ -23,7 +21,7 @@ def Check_Yahoo():
             store1 = open(save1, "w")
             store1.write(str(resp1))
             store1.close()
-            
+
             # for json | tomgs way: https://github.com/tomgs/sentdexworkarounds
             link2 = "https://query2.finance.yahoo.com/v10/finance/quoteSummary/"+e.upper()+"?modules=assetProfile,financialData,defaultKeyStatistics,calendarEvents,incomeStatementHistory,cashflowStatementHistory,balanceSheetHistory"
             resp2 = urllib.request.urlopen(link2).read()
