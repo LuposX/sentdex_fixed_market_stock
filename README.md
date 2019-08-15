@@ -41,6 +41,7 @@ More under [Datasets](#Datasets).
 Here i'll list the prerequisites you need for each file:   
 <details>
   <summary>Click to expand and to see the necessary prerequisite for each file.</summary>
+  
   **sentdex_visualization_episode11.py** can be found [here](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/source    /sentdex_visualization_episode11.py) it needs:     
   -   **[matplotlib](https://matplotlib.org/)**
   -   **[seaborn](https://seaborn.pydata.org/installing.html)**    
