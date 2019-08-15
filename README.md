@@ -5,7 +5,7 @@
 # About
 
 Date of first upload: *09.08.2019*  
-Date of last upload: *15.08.2019*
+Date of last upload: *16.08.2019*
   
 This is a github repository for the youtube tutorial series from [sentdex](https://youtu.be/URTZ2jKCgBc). Stand: [Episode 19](https://www.youtube.com/watch?v=1dk9NO2M41E&list=PLQVvvaa0QuDd0flgGphKCej-9jp-QdzZ3&index=19).   
 This github repository is UNOFFICIAL
@@ -42,50 +42,50 @@ Here i'll list the prerequisites you need for each file:
 <details>
   <summary>Click to expand and to see the necessary prerequisite for each file.</summary>  
     
-  **sentdex_visualization_episode11.py** can be found [here](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/source/sentdex_visualization_episode11.py) it needs:     
-  -   **[matplotlib](https://matplotlib.org/)**
-  -   **[seaborn](https://seaborn.pydata.org/installing.html)**    
+**sentdex_visualization_episode11.py** can be found [here](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/source/sentdex_visualization_episode11.py) it needs:  
+-   **[matplotlib](https://matplotlib.org/)**  
+-   **[seaborn](https://seaborn.pydata.org/installing.html)**  
 
-  **sentdex_stock_market_episode12.py** can be found [here](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/source/sentdex_stock_market_episode12.py) it needs:    
-  -   **[intraQuarter](https://pythonprogramming.net/downloads/intraQuarter.zip/)**    
-  -   **[Yahoo Index](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/datasets/YAHOO_INDEX_GSPC.csv)**   
+**sentdex_stock_market_episode12.py** can be found [here](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/source/sentdex_stock_market_episode12.py) it needs:  
+-   **[intraQuarter](https://pythonprogramming.net/downloads/intraQuarter.zip/)**  
+-   **[Yahoo Index](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/datasets/YAHOO_INDEX_GSPC.csv)**  
 
-  **sentdex_visualization_episode13.py** can be found [here](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/source/sentdex_visualization_episode13.py) it needs:    
-  - **[matplotlib](https://matplotlib.org/)**  
-  - **[seaborn](https://seaborn.pydata.org/installing.html)**  
+**sentdex_visualization_episode13.py** can be found [here](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/source/sentdex_visualization_episode13.py) it needs:  
+-   **[matplotlib](https://matplotlib.org/)**  
+-   **[seaborn](https://seaborn.pydata.org/installing.html)**  
 
-  **sentdex_prediction_episode15.py** can be found [here](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/source/sentdex_prediction_episode15.py) it needs:       
-  -   **[Stock_market_full.csv](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/datasets/Stock_market_full.csv)**      
+**sentdex_prediction_episode15.py** can be found [here](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/source/sentdex_prediction_episode15.py) it needs:       
+-   **[Stock_market_full.csv](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/datasets/Stock_market_full.csv)**      
 
-  **sentdex_getData_episode17.py** can be found [here](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/source/sentdex_getData_episode17.py) it needs:     
-  -   **[intraQuarter](https://pythonprogramming.net/downloads/intraQuarter.zip/)**     
+**sentdex_getData_episode17.py** can be found [here](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/source/sentdex_getData_episode17.py) it needs:     
+-   **[intraQuarter](https://pythonprogramming.net/downloads/intraQuarter.zip/)**     
 
 
-  **sentdex_data_episode18.py** can be found [here](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/source/sentdex_data_episode18.py) it needs:   
-  - **[Yahoo Index](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/datasets/YAHOO_INDEX_GSPC.csv)**  
-  - **[Stock prices](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/datasets/stock_prices.zip)**  
+**sentdex_data_episode18.py** can be found [here](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/source/sentdex_data_episode18.py) it needs:   
+- **[Yahoo Index](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/datasets/YAHOO_INDEX_GSPC.csv)**  
+- **[Stock prices](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/datasets/stock_prices.zip)**  
 
-  **sentdex_data_episode19.py** can be found [here](https://github.com/LuposX/sentdex_fixed_market_stock/blob/episode21-23/source/sentdex_prediction_episode19.py) it needs:   
-  -   **[Stock_market_acc_WITH_NA.csv](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/datasets/Stock_market_acc_WITH_NA.csv)**    
-  -   **[Stock_market_acc_NO_NA.csv](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/datasets/Stock_market_acc_NO_NA.csv)**     
+**sentdex_data_episode19.py** can be found [here](https://github.com/LuposX/sentdex_fixed_market_stock/blob/episode21-23/source/sentdex_prediction_episode19.py) it needs:   
+-   **[Stock_market_acc_WITH_NA.csv](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/datasets/Stock_market_acc_WITH_NA.csv)**    
+-   **[Stock_market_acc_NO_NA.csv](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/datasets/Stock_market_acc_NO_NA.csv)**     
 
-  **sentdex_data_episode20.py** can be found [here](https://github.com/LuposX/sentdex_fixed_market_stock/blob/episode_20/source/sentdex_profit_episode20.py) it needs:   
-  -   **[Stock_market_acc_WITH_NA.csv](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/datasets/Stock_market_acc_WITH_NA.csv)**    
-  -   **[Stock_market_acc_NO_NA.csv](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/datasets/Stock_market_acc_NO_NA.csv)**    
+**sentdex_data_episode20.py** can be found [here](https://github.com/LuposX/sentdex_fixed_market_stock/blob/episode_20/source/sentdex_profit_episode20.py) it needs:   
+-   **[Stock_market_acc_WITH_NA.csv](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/datasets/Stock_market_acc_WITH_NA.csv)**    
+-   **[Stock_market_acc_NO_NA.csv](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/datasets/Stock_market_acc_NO_NA.csv)**    
 
-  **sentdex_data_episode21.py** can be found [here](https://github.com/LuposX/sentdex_fixed_market_stock/blob/episode21-23/source/sentdex_data_21.py) it needs:   
+**sentdex_data_episode21.py** can be found [here](https://github.com/LuposX/sentdex_fixed_market_stock/blob/episode21-23/source/sentdex_data_21.py) it needs:   
 -   **[intraQuarter](https://pythonprogramming.net/downloads/intraQuarter.zip/)**      
  
 
-  **sentdex_data_episode22.py** can be found [here](https://github.com/LuposX/sentdex_fixed_market_stock/blob/episode21-23/source/sentdex_data_episode22.py) it needs:   
-  -   **[intraQuarter](https://pythonprogramming.net/downloads/intraQuarter.zip/)**   
-  -   **[html yahoo current stock](https://drive.google.com/drive/folders/1gCjk0cv28Lu1ooYPe2X7j0c-2xT0HDBc?usp=sharing)**
+**sentdex_data_episode22.py** can be found [here](https://github.com/LuposX/sentdex_fixed_market_stock/blob/episode21-23/source/sentdex_data_episode22.py) it needs:   
+-   **[intraQuarter](https://pythonprogramming.net/downloads/intraQuarter.zip/)**   
+-   **[html yahoo current stock](https://drive.google.com/drive/folders/1gCjk0cv28Lu1ooYPe2X7j0c-2xT0HDBc?usp=sharing)**
   
-  **sentdex_data_episode23.py** can be found [here](https://github.com/LuposX/sentdex_fixed_market_stock/blob/episode_20/source/sentdex_profit_episode20.py) it needs:   
-  -   **[Stock_market_acc_WITH_NA.csv](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/datasets/Stock_market_acc_WITH_NA.csv)**    
-  -   **[Stock_market_acc_NO_NA.csv](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/datasets/Stock_market_acc_NO_NA.csv)**
-  -   **[forward_sample_NO_NA.csv]()**    
-  -   **[forward_sample_With_NA.csv]()**
+**sentdex_data_episode23.py** can be found [here](https://github.com/LuposX/sentdex_fixed_market_stock/blob/episode_20/source/sentdex_profit_episode20.py) it needs:   
+-   **[Stock_market_acc_WITH_NA.csv](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/datasets/Stock_market_acc_WITH_NA.csv)**    
+-   **[Stock_market_acc_NO_NA.csv](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/datasets/Stock_market_acc_NO_NA.csv)**
+-   **[forward_sample_NO_NA.csv]()**    
+-   **[forward_sample_With_NA.csv]()**
   
 </details> 
 
