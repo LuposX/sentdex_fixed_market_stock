@@ -173,7 +173,7 @@ def Key_Stats(return_true_or_false=False, gather=["Total Debt/Equity",
                             sp500_1y = datetime.fromtimestamp(one_year_later - 259200).strftime("%Y-%m-%d")
                             row = sp500_df[(sp500_df["Date"] == sp500_1y)]
                             sp500_1y_value = float(row["Adj Close"])
-                            sp500_value = round(sp500_value, 4)  
+                            sp500_value = round(sp500_value, 4)
 
                         except Exception as e3:
                             print("sp500 1y later: ", e3)
