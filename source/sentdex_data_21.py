@@ -2,7 +2,7 @@ import urllib.request
 import os
 import time
 
-path = "/datasets/intraQuarter"
+path = "../datasets/intraQuarter"
 
 def Check_Yahoo():
     statspath = path + "/_KeyStats"
@@ -12,7 +12,7 @@ def Check_Yahoo():
     counter = 0
     for e in stock_list[1:]:
         try:
-            e = e.replace("/datasets/intraQuarter/_KeyStats\\", "")
+            e = e.replace("../datasets/intraQuarter/_KeyStats\\", "")
 
             # for html | sentdex way
             link1 = "https://finance.yahoo.com/quote/"+e.upper()+"/key-statistics?p="+e.upper()
