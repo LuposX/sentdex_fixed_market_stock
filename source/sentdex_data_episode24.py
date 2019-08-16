@@ -8,8 +8,6 @@ import seaborn as sns
 from pandas.plotting import register_matplotlib_converters
 register_matplotlib_converters()
 
-%matplotlib inline
-
 import os
 import time
 from datetime import datetime
