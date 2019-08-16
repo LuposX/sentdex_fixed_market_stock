@@ -69,7 +69,7 @@ def Build_Data_Set():
     data_df = data_df.fillna(0)
 
     # how much percentag it must be better to be a outperformer
-    data_df["Status2"] = list(map(Status_calc, data_df["stock_p_change"], data_df["sp500_p_change"])) 
+    data_df["Status2"] = list(map(Status_calc, data_df["stock_p_change"], data_df["sp500_p_change"]))
 
     # converts our wished features to a 2d list
     X = np.array(data_df[FEATURES].values.tolist())
