@@ -11,7 +11,7 @@ def Build_Data_Set(features=["DE Ratio",
                              "Trailing P/E"]):
 
     # reads the csv to save it in ram
-    data_df = pd.read_csv("Stock_market_full.csv")
+    data_df = pd.read_csv("../datasets/Stock_market_full.csv")
     data_df.dropna(axis=0, inplace=True)
 
     # uncomment this if you want to use less data
