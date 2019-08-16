@@ -10,7 +10,7 @@ from datetime import datetime
 import re
 
 # dont foget to change the paths to your own paths
-path = "atasets/intraQuarter"
+path = "../datasets/intraQuarter"
 sp500_df = pd.read_csv("../datasets/YAHOO_INDEX_GSPC.csv")
 stock_df = pd.read_csv("../datasets/stock_prices.csv")
 
