@@ -210,7 +210,7 @@ def Key_Stats(return_true_or_false=False, gather=["Total Debt/Equity",
                             row = stock_df[(stock_df["Date"] == stock_price)][ticker.upper()] # this line fails
                             # ----------------------------------------------------------------------------------------
 
-                            stock_price = round(float(row), 2) 
+                            stock_price = round(float(row), 2)
                             # print(stock_price)
 
                         except Exception as e5:
