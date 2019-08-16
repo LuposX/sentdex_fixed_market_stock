@@ -64,6 +64,7 @@ Here i'll list the prerequisites you need for each file. You can find them in th
 -   **[intraQuarter](https://pythonprogramming.net/downloads/intraQuarter.zip/)**     
 
 **sentdex_data_episode18.py** can be found [here](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/source/sentdex_data_episode18.py) it needs:   
+-   **[intraQuarter](https://pythonprogramming.net/downloads/intraQuarter.zip/)**   
 -   **[Yahoo Index](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/datasets/YAHOO_INDEX_GSPC.csv)**   
 -   **[Stock prices](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/datasets/stock_prices.zip)**  
 
@@ -89,9 +90,10 @@ Here i'll list the prerequisites you need for each file. You can find them in th
 -   **[forward_sample_NO_NA.csv](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/datasets/forward_sample_NO_NA.csv)**    
 -   **[forward_sample_With_NA.csv](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/datasets/forward_sample_WITH_NA.csv)**
 
-**sentdex_data_episode24.py** can be found [here](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/source/sentdex_data_episode22.py) it needs:   
+**sentdex_data_episode24.py** can be found [here](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/source/sentdex_data_episode24.py) it needs:   
 -   **[intraQuarter](https://pythonprogramming.net/downloads/intraQuarter.zip/)**   
--   **[html yahoo current stock](https://drive.google.com/drive/folders/1gCjk0cv28Lu1ooYPe2X7j0c-2xT0HDBc?usp=sharing)**
+-   **[Yahoo Index](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/datasets/YAHOO_INDEX_GSPC.csv)**   
+-   **[Stock prices](https://github.com/LuposX/sentdex_fixed_market_stock/blob/master/datasets/stock_prices.zip)**  
   
 </details> 
 
