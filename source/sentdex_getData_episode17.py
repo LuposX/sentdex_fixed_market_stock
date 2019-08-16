@@ -6,7 +6,7 @@ import quandl
 
 quandl.ApiConfig.api_key = "XXX"
 
-path = "/datasets/intraQuarter"
+path = "../datasets/intraQuarter"
 
 def Stock_Prices():
     df = pd.DataFrame()
