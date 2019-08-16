@@ -7,7 +7,7 @@ import numpy as np
 import re
 
 # path to oure datasets make sure to change the paths to your own paths
-path = "/datasets/intraQuarter" # insert here your path to the intraQuarter dataset
+path = "../datasets/intraQuarter" # insert here your path to the intraQuarter dataset
 sp500_df = pd.read_csv("../datasets/YAHOO_INDEX_GSPC.csv") # insert here your path to the YAHOO_INDEX_GSPC.csv
 
 # our function to scrap data and create a "new" datasets. "gather" are our features
