@@ -6,7 +6,7 @@ import numpy as np
 import os
 import re
 
-path = "/datasets/intraQuarter"
+path = "../datasets/intraQuarter"
 
 def Forward(gather=["Total Debt/Equity",
                       'Trailing P/E',
@@ -91,7 +91,7 @@ def Forward(gather=["Total Debt/Equity",
                                  ##############
                                  'Status'])
 
-    file_list = os.listdir("episode21/html")
+    file_list = os.listdir("../datasets/episode21/html")
 
     for each_file in file_list[:]:
 
