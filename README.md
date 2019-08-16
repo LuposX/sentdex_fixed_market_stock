@@ -21,12 +21,14 @@ If you have any Issued please open a **[Issue](https://github.com/LuposX/sentdex
 
 1.  Download the file for the corresponding episode in the **source** folder.
 
-2.  I would recomend to either create the datasets you need, in the file you downloaded, with other python scripts from me (from the **source** folder) or to download the corresponding **datasets** from my folder. DO NOT USE YOUR OWN DATASETS IT MIGHT NOT WORK.
+2. Make sure you have all libaries you need to run the file. I listed the libaries you need in **requirements.txt**
+
+3.  I would recomend to either create the datasets you need, in the file you downloaded, with other python scripts from me (from the **source** folder) or to download the corresponding **datasets** from my folder. DO NOT USE YOUR OWN DATASETS IT MIGHT NOT WORK.
 More under [Prerequisite](#Prerequisite). 
 
-3.  Make sure to change, in the files you downloaded, the lines to the location of your **datasets** when needed. 
+4.  Make sure to change, in the files you downloaded, the lines to the location of your **datasets** when needed. 
 
-4.  run the file with the command in the cmd:    
+5.  run the file with the command in the cmd:    
 ``` py sentdex_XXX_XXX.py ```      
    
 **Notes:**     
@@ -93,9 +95,3 @@ Here i'll list the prerequisites you need for each file. You can find them in th
 
 MIT License means: [Click me](https://choosealicense.com/licenses/mit/)   
 Credits sentdex: [Click me](https://www.youtube.com/user/sentdex/)  
-
-## Gitpod
-
-If you dont want to download it because you dont know if it malicious or not or other reasons check the online IDE out:  
-Disclaimer: not every file works. Because i didn't upload the **intraQuart** dataset on github and the **stock_price** dataset is in a zip due to the size.  
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/LuposX/sentdex_fixed_market_stock/source)  
