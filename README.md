@@ -7,7 +7,7 @@
 Date of first upload: *09.08.2019*  
 Date of last upload: *18.08.2019*
   
-This is a github repository for the youtube tutorial series from [sentdex](https://youtu.be/URTZ2jKCgBc). Stand: [Episode 26](https://www.youtube.com/watch?v=nTWQN5SVqgE&list=PLQVvvaa0QuDd0flgGphKCej-9jp-QdzZ3&index=26).   
+This is a github repository for the youtube tutorial series from [sentdex](https://youtu.be/URTZ2jKCgBc). Stand: Episode 28/ Episode 28.   
 This github repository is UNOFFICIAL
 go here if you want to support sentdex:  
 -   [Sentdex YouTube](https://www.youtube.com/user/sentdex/)     
