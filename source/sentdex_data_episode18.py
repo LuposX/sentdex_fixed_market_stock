@@ -145,7 +145,7 @@ def Key_Stats(return_true_or_false=False, gather=["Total Debt/Equity",
                         sp500_date = datetime.fromtimestamp(unix_time).strftime("%Y-%m-%d")
                         row = sp500_df[(sp500_df["Date"] == sp500_date)]
                         sp500_value = float(row["Adj Close"])
-                        sp500_value = round(sp500_value, 4)  
+                        sp500_value = round(sp500_value, 4)
 
                     except:
                         try:
