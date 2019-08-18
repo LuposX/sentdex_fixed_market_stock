@@ -115,12 +115,8 @@ def Analyis(report=False):
     if report: print(classification_report(y[-test_size:], pred))
     if report: print("--------------------------------------------------------------------------")
     if report: print("Model accuracy: ", accuracy_score(y[-test_size:], pred))
-
-    compared = round(((if_strat - if_market) / if_market * 100.0), 3)
+    
     do_nothing = total_invest * invest_amount
-
-    avg_market = round(((if_market - do_nothing) / do_nothing) * 100.0, 3)
-    avg_strat = round(((if_strat - do_nothing) / do_nothing) * 100.0, 3)
 
     data_df = pd.read_csv("forward_sample_NO_NA.csv")
     data_df = data_df.fillna(0)
