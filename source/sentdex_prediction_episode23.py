@@ -115,7 +115,7 @@ def Analyis(report=False):
     if report: print(classification_report(y[-test_size:], pred))
     if report: print("--------------------------------------------------------------------------")
     if report: print("Model accuracy: ", accuracy_score(y[-test_size:], pred))
-    
+
     do_nothing = total_invest * invest_amount
 
     data_df = pd.read_csv("forward_sample_NO_NA.csv")
