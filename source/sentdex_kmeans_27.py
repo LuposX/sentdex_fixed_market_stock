@@ -17,13 +17,13 @@ sns.scatterplot(x, y)
 plt.show()
 
 # convert our datapoints in 1 "list"
-X = np.array([[1, 2], 
-              [5, 8], 
-              [1.5, 1.8], 
-              [8, 8], 
-              [1, 0.6], 
+X = np.array([[1, 2],
+              [5, 8],
+              [1.5, 1.8],
+              [8, 8],
+              [1, 0.6],
               [9, 11]])
-			  
+
 
 # creating our cluster model
 kmeans = KMeans(n_clusters=2)
