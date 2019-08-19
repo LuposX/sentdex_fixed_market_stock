@@ -14,7 +14,7 @@ go here if you want to support sentdex:
 -   [Sentdex Website](https://pythonprogramming.net/)    
 
 Because the sentdex tutorial playlist is from 2014. Some libaries changed and the original code which sentdex uploaded on his [forum](https://pythonprogramming.net/) doesn't work anymore (at least for me). Therefore i want to offer my code that worked for me for those who 
-it need.   
+it need. You can also find the datasets in the **dataset** folder if you miss some datasets.  
 If you have any Issued please open a **[Issue](https://github.com/LuposX/sentdex_fixed_market_stock/issues/new)** in github. 
    
 ## Use
