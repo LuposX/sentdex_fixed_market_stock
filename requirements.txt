@@ -5,3 +5,4 @@ sklearn
 quandl
 pandas
 scikit-learn>=0.24.2 # not directly required, pinned by Snyk to avoid a vulnerability
+pillow>=10.2.0 # not directly required, pinned by Snyk to avoid a vulnerability
